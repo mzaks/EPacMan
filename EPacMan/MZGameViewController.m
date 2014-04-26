@@ -1,15 +1,15 @@
 //
-//  MZViewController.m
+//  MZGameViewController.m
 //  EPacMan
 //
 //  Created by Maxim Zaks on 26.04.14.
 //  Copyright (c) 2014 Maxim Zaks. All rights reserved.
 //
 
-#import "MZViewController.h"
-#import "MZMyScene.h"
+#import "MZGameViewController.h"
+#import "MZGameScene.h"
 
-@implementation MZViewController
+@implementation MZGameViewController
 
 - (void)viewDidLoad
 {
@@ -21,7 +21,7 @@
     skView.showsNodeCount = YES;
     
     // Create and configure the scene.
-    SKScene * scene = [MZMyScene sceneWithSize:skView.bounds.size];
+    SKScene * scene = [MZGameScene sceneWithSize:skView.bounds.size];
     scene.scaleMode = SKSceneScaleModeAspectFill;
     
     // Present the scene.
@@ -35,11 +35,7 @@
 
 - (NSUInteger)supportedInterfaceOrientations
 {
-    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
-        return UIInterfaceOrientationMaskAllButUpsideDown;
-    } else {
-        return UIInterfaceOrientationMaskAll;
-    }
+    return UIInterfaceOrientationMaskLandscape;
 }
 
 - (void)didReceiveMemoryWarning
