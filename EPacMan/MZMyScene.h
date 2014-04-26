@@ -1,0 +1,13 @@
+//
+//  MZMyScene.h
+//  EPacMan
+//
+
+//  Copyright (c) 2014 Maxim Zaks. All rights reserved.
+//
+
+#import <SpriteKit/SpriteKit.h>
+
+@interface MZMyScene : SKScene
+
+@end
