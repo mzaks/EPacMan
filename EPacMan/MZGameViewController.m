@@ -22,7 +22,7 @@
     
     // Create and configure the scene.
     SKScene * scene = [MZGameScene sceneWithSize:skView.bounds.size];
-    scene.scaleMode = SKSceneScaleModeAspectFill;
+//    scene.scaleMode = SKSceneScaleModeAspectFill;
     
     // Present the scene.
     [skView presentScene:scene];

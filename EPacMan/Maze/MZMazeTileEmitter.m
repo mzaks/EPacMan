@@ -31,7 +31,6 @@
             }
         }
     }
-    NSLog(@"Entities %i : %@", repo.allEntities.count, repo.allEntities);
 }
 
 @end
