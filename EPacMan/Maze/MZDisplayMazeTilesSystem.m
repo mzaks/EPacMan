@@ -7,8 +7,8 @@
 #import "MZSpriteKitNodeComponent.h"
 #import "MZNotWalkableComponent.h"
 
-#define TILE_WIDTH 16
-#define TILE_HEIGHT 21
+#define TILE_WIDTH 10
+#define TILE_HEIGHT 10
 
 
 
@@ -41,7 +41,8 @@
     for (ESEntity *mazeTile in freshCreatedMazeTiles){
         MZPositionComponent *positionComponent = getComponent(mazeTile, MZPositionComponent);
         UIColor *color = [mazeTile hasComponentOfType:[MZNotWalkableComponent class]]? [SKColor yellowColor] : [SKColor grayColor];
-        SKNode *node = [SKSpriteNode spriteNodeWithColor:color size:CGSizeMake(TILE_WIDTH, TILE_HEIGHT)];
+        SKSpriteNode *node = [SKSpriteNode spriteNodeWithColor:color size:CGSizeMake(TILE_WIDTH, TILE_HEIGHT)];
+        node.anchorPoint = CGPointMake(0, 1);
         node.position = CGPointMake(positionComponent.position.x * TILE_WIDTH, positionComponent.position.y * TILE_HEIGHT);
         [scene addChild:node];
     }

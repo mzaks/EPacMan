@@ -15,17 +15,10 @@
 {
     [super viewDidLoad];
 
-    // Configure the view.
-    SKView * skView = (SKView *)self.view;
-    skView.showsFPS = YES;
-    skView.showsNodeCount = YES;
+    SKScene * scene = [MZGameScene sceneWithSize:_gameView.bounds.size];
+    scene.scaleMode = SKSceneScaleModeFill;
     
-    // Create and configure the scene.
-    SKScene * scene = [MZGameScene sceneWithSize:skView.bounds.size];
-//    scene.scaleMode = SKSceneScaleModeAspectFill;
-    
-    // Present the scene.
-    [skView presentScene:scene];
+    [_gameView presentScene:scene];
 }
 
 - (BOOL)shouldAutorotate
@@ -41,7 +34,6 @@
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
-    // Release any cached data, images, etc that aren't in use.
 }
 
 @end

@@ -10,5 +10,6 @@
 #import <SpriteKit/SpriteKit.h>
 
 @interface MZGameViewController : UIViewController
+@property (weak, nonatomic) IBOutlet SKView *gameView;
 
 @end
