@@ -23,6 +23,10 @@
 		0B4A6674190C1B1900C0498C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B4A664F190C1B1900C0498C /* UIKit.framework */; };
 		0B4A667C190C1B1900C0498C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0B4A667A190C1B1900C0498C /* InfoPlist.strings */; };
 		0B4A667E190C1B1900C0498C /* EPacManTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B4A667D190C1B1900C0498C /* EPacManTests.m */; };
+		0B4A668C190D472400C0498C /* down.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B4A6688190D472400C0498C /* down.png */; };
+		0B4A668D190D472400C0498C /* left.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B4A6689190D472400C0498C /* left.png */; };
+		0B4A668E190D472400C0498C /* right.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B4A668A190D472400C0498C /* right.png */; };
+		0B4A668F190D472400C0498C /* up.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B4A668B190D472400C0498C /* up.png */; };
 		638F016EB5296DCBC5ABDB1B /* MZDisplayMazeTilesSystem.m in Sources */ = {isa = PBXBuildFile; fileRef = 638F0B005E2BF07078E8BC3E /* MZDisplayMazeTilesSystem.m */; };
 		638F01E6AF7BBC63974D2514 /* MZRootSystem.m in Sources */ = {isa = PBXBuildFile; fileRef = 638F0E038BC3C2BEAC186E9B /* MZRootSystem.m */; };
 		638F025CA37D50D301B85FDD /* MZGameScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 638F07EF4E7811B90E67FFD7 /* MZGameScene.m */; };
@@ -69,6 +73,10 @@
 		0B4A6679190C1B1900C0498C /* EPacManTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "EPacManTests-Info.plist"; sourceTree = "<group>"; };
 		0B4A667B190C1B1900C0498C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		0B4A667D190C1B1900C0498C /* EPacManTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EPacManTests.m; sourceTree = "<group>"; };
+		0B4A6688190D472400C0498C /* down.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = down.png; sourceTree = "<group>"; };
+		0B4A6689190D472400C0498C /* left.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = left.png; sourceTree = "<group>"; };
+		0B4A668A190D472400C0498C /* right.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = right.png; sourceTree = "<group>"; };
+		0B4A668B190D472400C0498C /* up.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = up.png; sourceTree = "<group>"; };
 		0EB59A553BB14C6FBAD2CB0B /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 		26F0E1DF73804C419A02359C /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		638F0139E456C49568927867 /* MZPositionComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MZPositionComponent.h; sourceTree = "<group>"; };
@@ -123,6 +131,7 @@
 		0B4A663F190C1B1900C0498C = {
 			isa = PBXGroup;
 			children = (
+				0B4A6687190D472400C0498C /* Assets */,
 				0B4A6653190C1B1900C0498C /* EPacMan */,
 				0B4A6677190C1B1900C0498C /* EPacManTests */,
 				0B4A664A190C1B1900C0498C /* Frameworks */,
@@ -200,6 +209,17 @@
 				0B4A667A190C1B1900C0498C /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		0B4A6687190D472400C0498C /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				0B4A6688190D472400C0498C /* down.png */,
+				0B4A6689190D472400C0498C /* left.png */,
+				0B4A668A190D472400C0498C /* right.png */,
+				0B4A668B190D472400C0498C /* up.png */,
+			);
+			path = Assets;
 			sourceTree = "<group>";
 		};
 		638F0226761E4D7B94376F66 /* Maze */ = {
@@ -323,9 +343,13 @@
 			files = (
 				0B4A6658190C1B1900C0498C /* InfoPlist.strings in Resources */,
 				0B4A666B190C1B1900C0498C /* Images.xcassets in Resources */,
+				0B4A668E190D472400C0498C /* right.png in Resources */,
 				0B4A6669190C1B1900C0498C /* Spaceship.png in Resources */,
 				0B4A6661190C1B1900C0498C /* Main.storyboard in Resources */,
 				638F0CC9D5A6FA7C5CA8ED18 /* maze.txt in Resources */,
+				0B4A668F190D472400C0498C /* up.png in Resources */,
+				0B4A668D190D472400C0498C /* left.png in Resources */,
+				0B4A668C190D472400C0498C /* down.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
