@@ -1,5 +1,5 @@
 typedef NS_ENUM(uint, MZDirection){
-    UP,
+    UP =1,
     RIGHT,
     DOWN,
     LEFT

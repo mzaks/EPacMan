@@ -40,7 +40,7 @@
         MZDirection currentDirection = getComponent(character, MZMovingComponent).direction;
         if([self isCharacter:character ableToMoveInDirection:wishDirection]){
             [self triggerMovingAtTick:tickComponent forCharacter:character inDirection:wishDirection];
-        } else if([self isCharacter:character ableToMoveInDirection:currentDirection]){
+        } else if([character hasComponentOfType:[MZMovingComponent class]] && [self isCharacter:character ableToMoveInDirection:currentDirection]){
             [self triggerMovingAtTick:tickComponent forCharacter:character inDirection:currentDirection];
         } else {
             [character removeComponentOfType:[MZMovingComponent class]];
