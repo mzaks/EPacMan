@@ -1,0 +1,2 @@
+#define MOVE_DURATION_IN_TICKS 6
+#define TARGETED_FPS 60.0

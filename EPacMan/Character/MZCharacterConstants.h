@@ -1,1 +1,0 @@
-#define MOVE_DURATION_IN_TICKS 6

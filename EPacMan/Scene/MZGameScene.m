@@ -15,8 +15,11 @@
 #import "MZGameSceneComponent.h"
 #import "MZSpriteKitNodeComponent.h"
 #import "MZDisplayCharacterSystem.h"
-#import "MZCharacterMovingSystem.h"
+#import "MZMovingSystem.h"
 #import "MZTileMap.h"
+#import "MZTickComponent.h"
+#import "MZMovingAnimationSystem.h"
+#import "MZStopSystem.h"
 
 @implementation MZGameScene {
     ESEntityRepository *_repo;
@@ -26,13 +29,17 @@
 -(id)initWithSize:(CGSize)size {    
     if (self = [super initWithSize:size]) {
         _repo = [ESEntityRepository sharedRepository];
+        [self createTickEntity];
         [MZTileMap sharedMap];
         [self createRootSystem];
         [self createGameSceneEntity];
         [MZMazeTileEmitter readMazeDefinitionAndCreateMazeTileEntities];
-
     }
     return self;
+}
+
+- (void)createTickEntity {
+    [[_repo createEntity] addComponent:[MZTickComponent componentWithCurrentTick:0]];
 }
 
 - (void)createGameSceneEntity {
@@ -45,11 +52,15 @@
     _rootSystem = [ESSystems new];
     [_rootSystem addSystem:[MZDisplayMazeTilesSystem new]];
     [_rootSystem addSystem:[MZDisplayCharacterSystem new]];
-    [_rootSystem addSystem:[MZCharacterMovingSystem new]];
+    [_rootSystem addSystem:[MZMovingSystem new]];
+    [_rootSystem addSystem:[MZMovingAnimationSystem new]];
+    [_rootSystem addSystem:[MZStopSystem new]];
 }
 
 -(void)update:(CFTimeInterval)currentTime {
+    ESEntity *tickEntity = [_repo singletonEntity:[MZTickComponent matcher]];
     [_rootSystem execute];
+    [tickEntity exchangeComponent:[MZTickComponent componentWithCurrentTick:getComponent(tickEntity, MZTickComponent ).currentTick + 1]];
 }
 
 @end

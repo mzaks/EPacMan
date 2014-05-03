@@ -2,5 +2,5 @@
 #import "ESSystem.h"
 
 
-@interface MZCharacterMovingSystem : NSObject<ESSystem>
+@interface MZMovingSystem : NSObject<ESSystem>
 @end

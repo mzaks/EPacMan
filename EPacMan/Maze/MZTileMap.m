@@ -51,19 +51,23 @@
     return _map[mapIndex];
 }
 
-- (ESEntity *)tileEntityInDirection:(MZDirection)direction fromEntityWithPosition:(ESEntity *)tile{
-    MZPositionComponent *positionComponent = getComponent(tile, MZPositionComponent);
+- (ESEntity *)tileEntityInDirection:(MZDirection)direction fromEntityWithPosition:(ESEntity *)entity {
+    MZPositionComponent *positionComponent = getComponent(entity, MZPositionComponent);
+    NSAssert(positionComponent, @"Entity :%@ shoudl have position component", entity);
+
     if (direction == LEFT){
         return [self tileEntityLeftFromPosition:positionComponent];
-    }
-    if (direction == RIGHT){
+    } else if (direction == RIGHT){
         return [self tileEntityRightFromTileEntity:positionComponent];
-    }
-    if (direction == UP){
+    }else if (direction == UP){
         return [self tileEntityUpFromTileEntity:positionComponent];
+    }else if (direction == DOWN){
+        return [self tileEntityDownFromTileEntity:positionComponent];
     }
 
-    return [self tileEntityDownFromTileEntity:positionComponent];
+    NSAssert(NO, @"direction: %n unknown", direction);
+
+    return nil;
 }
 
 

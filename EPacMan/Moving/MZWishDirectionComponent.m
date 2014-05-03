@@ -1,7 +1,7 @@
-#import "MZMovingDirectionComponent.h"
+#import "MZWishDirectionComponent.h"
 
 
-@implementation MZMovingDirectionComponent {
+@implementation MZWishDirectionComponent {
 
 }
 - (instancetype)initWithDirection:(MZDirection)direction {
@@ -16,5 +16,4 @@
 + (instancetype)componentWithDirection:(MZDirection)direction {
     return [[self alloc] initWithDirection:direction];
 }
-
 @end

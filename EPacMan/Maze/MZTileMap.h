@@ -17,6 +17,6 @@
 
 - (ESEntity *)tileEntityAtPosition:(CGPoint)position;
 
-- (ESEntity *)tileEntityInDirection:(MZDirection)direction fromEntityWithPosition:(ESEntity *)tile;
+- (ESEntity *)tileEntityInDirection:(MZDirection)direction fromEntityWithPosition:(ESEntity *)entity;
 
 @end

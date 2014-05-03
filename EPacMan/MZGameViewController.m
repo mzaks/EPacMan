@@ -12,8 +12,8 @@
 #import "ESEntityRepository+Singleton.h"
 #import "MZPacManComponent.h"
 #import "ESEntity.h"
-#import "MZMovingDirectionComponent.h"
-#import "MZWishMovingDirectionComponent.h"
+#import "MZMovingComponent.h"
+#import "MZWishDirectionComponent.h"
 
 @implementation MZGameViewController {
     ESEntityRepository *_repository;
@@ -46,19 +46,19 @@
 }
 - (IBAction)up:(id)sender {
     ESEntity *pacManEntity = [_repository singletonEntity:[MZPacManComponent matcher]];
-    [pacManEntity exchangeComponent:[MZWishMovingDirectionComponent componentWithDirection:UP]];
+    [pacManEntity exchangeComponent:[MZWishDirectionComponent componentWithDirection:UP]];
 }
 - (IBAction)down:(id)sender {
     ESEntity *pacManEntity = [_repository singletonEntity:[MZPacManComponent matcher]];
-    [pacManEntity exchangeComponent:[MZWishMovingDirectionComponent componentWithDirection:DOWN]];
+    [pacManEntity exchangeComponent:[MZWishDirectionComponent componentWithDirection:DOWN]];
 }
 - (IBAction)right:(id)sender {
     ESEntity *pacManEntity = [_repository singletonEntity:[MZPacManComponent matcher]];
-    [pacManEntity exchangeComponent:[MZWishMovingDirectionComponent componentWithDirection:RIGHT]];
+    [pacManEntity exchangeComponent:[MZWishDirectionComponent componentWithDirection:RIGHT]];
 }
 - (IBAction)left:(id)sender {
     ESEntity *pacManEntity = [_repository singletonEntity:[MZPacManComponent matcher]];
-    [pacManEntity exchangeComponent:[MZWishMovingDirectionComponent componentWithDirection:LEFT]];
+    [pacManEntity exchangeComponent:[MZWishDirectionComponent componentWithDirection:LEFT]];
 }
 
 @end
