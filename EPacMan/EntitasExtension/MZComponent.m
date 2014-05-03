@@ -2,9 +2,8 @@
 #import "MZComponent.h"
 
 
-@implementation MZComponent {
+@implementation MZComponent
 
-}
 + (ESMatcher *)matcher {
     return [ESMatcher just:self];
 }

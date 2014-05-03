@@ -4,6 +4,12 @@
 #import "ESEntity.h"
 #import "MZPositionComponent.h"
 #import "MZNotWalkableComponent.h"
+#import "MZPacManComponent.h"
+#import "MZDotComponent.h"
+#import "MZBigDotComponent.h"
+#import "MZGateComponent.h"
+#import "MZMazeTileComponent.h"
+#import "MZStopedComponent.h"
 
 
 @implementation MZMazeTileEmitter {
@@ -22,12 +28,28 @@
 
     for (NSUInteger y = 0; y < lines.count; y++) {
         NSString *line = lines[y];
-        for (int x = 0; x < line.length; x++) {
+        for (NSUInteger x = 0; x < line.length; x++) {
             unichar tileCharacter = [line characterAtIndex:x];
             ESEntity *mazeTileEntity = [repo createEntity];
             [mazeTileEntity addComponent:[MZPositionComponent componentWithPosition:CGPointMake(x, lines.count - y)]];
+            [mazeTileEntity addComponent:[MZMazeTileComponent new]];
             if(tileCharacter == '#'){
                 [mazeTileEntity addComponent:[MZNotWalkableComponent new]];
+            }
+            if(tileCharacter == '.'){
+                [mazeTileEntity addComponent:[MZDotComponent new]];
+            }
+            if(tileCharacter == 'o'){
+                [mazeTileEntity addComponent:[MZBigDotComponent new]];
+            }
+            if(tileCharacter == '='){
+                [mazeTileEntity addComponent:[MZGateComponent new]];
+            }
+            if(tileCharacter == '@'){
+                ESEntity *pacMan = [repo createEntity];
+                [pacMan addComponent:[MZPacManComponent new]];
+                [pacMan addComponent:[MZPositionComponent componentWithPosition:CGPointMake(x, lines.count - y)]];
+                [pacMan addComponent:[MZStopedComponent new]];
             }
         }
     }

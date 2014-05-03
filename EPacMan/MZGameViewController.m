@@ -8,8 +8,16 @@
 
 #import "MZGameViewController.h"
 #import "MZGameScene.h"
+#import "ESEntityRepository.h"
+#import "ESEntityRepository+Singleton.h"
+#import "MZPacManComponent.h"
+#import "ESEntity.h"
+#import "MZMovingDirectionComponent.h"
+#import "MZWishMovingDirectionComponent.h"
 
-@implementation MZGameViewController
+@implementation MZGameViewController {
+    ESEntityRepository *_repository;
+}
 
 - (void)viewDidLoad
 {
@@ -19,6 +27,7 @@
     scene.scaleMode = SKSceneScaleModeFill;
     
     [_gameView presentScene:scene];
+    _repository = [ESEntityRepository sharedRepository];
 }
 
 - (BOOL)shouldAutorotate
@@ -34,6 +43,22 @@
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
+}
+- (IBAction)up:(id)sender {
+    ESEntity *pacManEntity = [_repository singletonEntity:[MZPacManComponent matcher]];
+    [pacManEntity exchangeComponent:[MZWishMovingDirectionComponent componentWithDirection:UP]];
+}
+- (IBAction)down:(id)sender {
+    ESEntity *pacManEntity = [_repository singletonEntity:[MZPacManComponent matcher]];
+    [pacManEntity exchangeComponent:[MZWishMovingDirectionComponent componentWithDirection:DOWN]];
+}
+- (IBAction)right:(id)sender {
+    ESEntity *pacManEntity = [_repository singletonEntity:[MZPacManComponent matcher]];
+    [pacManEntity exchangeComponent:[MZWishMovingDirectionComponent componentWithDirection:RIGHT]];
+}
+- (IBAction)left:(id)sender {
+    ESEntity *pacManEntity = [_repository singletonEntity:[MZPacManComponent matcher]];
+    [pacManEntity exchangeComponent:[MZWishMovingDirectionComponent componentWithDirection:LEFT]];
 }
 
 @end

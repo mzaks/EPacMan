@@ -3,7 +3,7 @@
 
 @interface ESEntityRepository (Singleton)
 
-+ (id)sharedRepository;
++ (instancetype)sharedRepository;
 
 - (ESEntity *)singletonEntity:(ESMatcher *)componentClass;
 

@@ -14,6 +14,9 @@
 #import "MZDisplayMazeTilesSystem.h"
 #import "MZGameSceneComponent.h"
 #import "MZSpriteKitNodeComponent.h"
+#import "MZDisplayCharacterSystem.h"
+#import "MZCharacterMovingSystem.h"
+#import "MZTileMap.h"
 
 @implementation MZGameScene {
     ESEntityRepository *_repo;
@@ -23,6 +26,7 @@
 -(id)initWithSize:(CGSize)size {    
     if (self = [super initWithSize:size]) {
         _repo = [ESEntityRepository sharedRepository];
+        [MZTileMap sharedMap];
         [self createRootSystem];
         [self createGameSceneEntity];
         [MZMazeTileEmitter readMazeDefinitionAndCreateMazeTileEntities];
@@ -40,6 +44,8 @@
 -(void)createRootSystem {
     _rootSystem = [ESSystems new];
     [_rootSystem addSystem:[MZDisplayMazeTilesSystem new]];
+    [_rootSystem addSystem:[MZDisplayCharacterSystem new]];
+    [_rootSystem addSystem:[MZCharacterMovingSystem new]];
 }
 
 -(void)update:(CFTimeInterval)currentTime {

@@ -7,7 +7,7 @@
 
 @implementation ESEntityRepository (Singleton)
 
-+ (id)sharedRepository {
++ (instancetype)sharedRepository {
     static ESEntityRepository *sharedRepository = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{

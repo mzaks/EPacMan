@@ -16,7 +16,6 @@
 		0B4A665E190C1B1900C0498C /* MZAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B4A665D190C1B1900C0498C /* MZAppDelegate.m */; };
 		0B4A6661190C1B1900C0498C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B4A665F190C1B1900C0498C /* Main.storyboard */; };
 		0B4A6664190C1B1900C0498C /* MZGameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B4A6663190C1B1900C0498C /* MZGameViewController.m */; };
-		0B4A6669190C1B1900C0498C /* Spaceship.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B4A6668190C1B1900C0498C /* Spaceship.png */; };
 		0B4A666B190C1B1900C0498C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0B4A666A190C1B1900C0498C /* Images.xcassets */; };
 		0B4A6672190C1B1900C0498C /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B4A6671190C1B1900C0498C /* XCTest.framework */; };
 		0B4A6673190C1B1900C0498C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B4A664B190C1B1900C0498C /* Foundation.framework */; };
@@ -27,17 +26,29 @@
 		0B4A668D190D472400C0498C /* left.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B4A6689190D472400C0498C /* left.png */; };
 		0B4A668E190D472400C0498C /* right.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B4A668A190D472400C0498C /* right.png */; };
 		0B4A668F190D472400C0498C /* up.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B4A668B190D472400C0498C /* up.png */; };
+		0BA12CD21911B52E00D0BFEB /* MZTileMap.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BA12CD11911B52E00D0BFEB /* MZTileMap.m */; };
 		638F016EB5296DCBC5ABDB1B /* MZDisplayMazeTilesSystem.m in Sources */ = {isa = PBXBuildFile; fileRef = 638F0B005E2BF07078E8BC3E /* MZDisplayMazeTilesSystem.m */; };
-		638F01E6AF7BBC63974D2514 /* MZRootSystem.m in Sources */ = {isa = PBXBuildFile; fileRef = 638F0E038BC3C2BEAC186E9B /* MZRootSystem.m */; };
 		638F025CA37D50D301B85FDD /* MZGameScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 638F07EF4E7811B90E67FFD7 /* MZGameScene.m */; };
+		638F0390DC17B8034B1DB747 /* MZGateComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = 638F09B03261A1946F758E5E /* MZGateComponent.m */; };
 		638F03C773A1EDAAA8D62544 /* MZComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = 638F02451BE840AC6BA2EA3C /* MZComponent.m */; };
 		638F03C9D77CBA290FA6CB99 /* ESEntityRepository+Singleton.m in Sources */ = {isa = PBXBuildFile; fileRef = 638F0D56DB5D245A828455BB /* ESEntityRepository+Singleton.m */; };
+		638F03E19008B6EA974C23A5 /* MZStopedComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = 638F0A61B31F83F036DBEAD7 /* MZStopedComponent.m */; };
 		638F076E8E3D9FEE6ECFDC14 /* MZMazeTileEmitter.m in Sources */ = {isa = PBXBuildFile; fileRef = 638F03794D507F3C157438B5 /* MZMazeTileEmitter.m */; };
+		638F07AA8536019FC1D59912 /* MZMazeMetricsComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = 638F01C5C0FB51046C56BDC0 /* MZMazeMetricsComponent.m */; };
+		638F084AEC8F584A0ECC62A7 /* MZCharacterMovingSystem.m in Sources */ = {isa = PBXBuildFile; fileRef = 638F000BEE3F3C0EEED97C30 /* MZCharacterMovingSystem.m */; };
+		638F08ECBDF92D7239DE5AC4 /* MZMovingDirectionComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = 638F0CD90BB20AC3F7B198B6 /* MZMovingDirectionComponent.m */; };
+		638F09B22A85656846FA7D22 /* MZCharacterConstants.h in Resources */ = {isa = PBXBuildFile; fileRef = 638F050331680FD70D1A3A4F /* MZCharacterConstants.h */; };
 		638F0B7A7F4D6556814804E0 /* MZNotWalkableComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = 638F0C76B0DBC5B65CDCCE45 /* MZNotWalkableComponent.m */; };
+		638F0BEDB093BA9C208142E8 /* MZWishMovingDirectionComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = 638F0BA57823F196E5ED8C96 /* MZWishMovingDirectionComponent.m */; };
+		638F0C29227855BD467FB491 /* MZMazeTileComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = 638F06FED6FC935092813CD4 /* MZMazeTileComponent.m */; };
 		638F0CC9D5A6FA7C5CA8ED18 /* maze.txt in Resources */ = {isa = PBXBuildFile; fileRef = 638F08A0D3F15D5F616B265D /* maze.txt */; };
 		638F0D0005FD35194C4FBE91 /* MZPositionComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = 638F0E3A58AC60666E5C9E84 /* MZPositionComponent.m */; };
 		638F0D1AA283B4B45F923FA1 /* MZGameSceneComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = 638F0FD26DE2184856407C56 /* MZGameSceneComponent.m */; };
+		638F0E722889CDB417B26FFC /* MZPacManComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = 638F0B403E3DDCB401ECFDCA /* MZPacManComponent.m */; };
+		638F0ED5AE2D28075CC54A94 /* MZDotComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = 638F059CA24D1ACD98668E5B /* MZDotComponent.m */; };
 		638F0F06B4075B06B8379B8E /* MZSpriteKitNodeComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = 638F0B5AD3AE603AAEEEF9F8 /* MZSpriteKitNodeComponent.m */; };
+		638F0F14832BED8E61FB6C30 /* MZDisplayCharacterSystem.m in Sources */ = {isa = PBXBuildFile; fileRef = 638F051DFAF8E138B499EF5D /* MZDisplayCharacterSystem.m */; };
+		638F0F6894CF76C9AEDE83FA /* MZBigDotComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = 638F026DDFE9E19070E418EF /* MZBigDotComponent.m */; };
 		F2DC48230EFA4F75A2093C87 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 26F0E1DF73804C419A02359C /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -66,7 +77,6 @@
 		0B4A6660190C1B1900C0498C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0B4A6662190C1B1900C0498C /* MZGameViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MZGameViewController.h; sourceTree = "<group>"; };
 		0B4A6663190C1B1900C0498C /* MZGameViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MZGameViewController.m; sourceTree = "<group>"; };
-		0B4A6668190C1B1900C0498C /* Spaceship.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Spaceship.png; sourceTree = "<group>"; };
 		0B4A666A190C1B1900C0498C /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		0B4A6670190C1B1900C0498C /* EPacManTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EPacManTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0B4A6671190C1B1900C0498C /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
@@ -77,26 +87,51 @@
 		0B4A6689190D472400C0498C /* left.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = left.png; sourceTree = "<group>"; };
 		0B4A668A190D472400C0498C /* right.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = right.png; sourceTree = "<group>"; };
 		0B4A668B190D472400C0498C /* up.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = up.png; sourceTree = "<group>"; };
+		0BA12CD01911B52E00D0BFEB /* MZTileMap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MZTileMap.h; sourceTree = "<group>"; };
+		0BA12CD11911B52E00D0BFEB /* MZTileMap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MZTileMap.m; sourceTree = "<group>"; };
 		0EB59A553BB14C6FBAD2CB0B /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 		26F0E1DF73804C419A02359C /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		638F000BEE3F3C0EEED97C30 /* MZCharacterMovingSystem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MZCharacterMovingSystem.m; sourceTree = "<group>"; };
 		638F0139E456C49568927867 /* MZPositionComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MZPositionComponent.h; sourceTree = "<group>"; };
+		638F01C5C0FB51046C56BDC0 /* MZMazeMetricsComponent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MZMazeMetricsComponent.m; sourceTree = "<group>"; };
 		638F02451BE840AC6BA2EA3C /* MZComponent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MZComponent.m; sourceTree = "<group>"; };
+		638F026DDFE9E19070E418EF /* MZBigDotComponent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MZBigDotComponent.m; sourceTree = "<group>"; };
+		638F0300F3528684F4F3E377 /* MZDotComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MZDotComponent.h; sourceTree = "<group>"; };
 		638F0331042C33F4E2DE20D2 /* ESEntityRepository+Singleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ESEntityRepository+Singleton.h"; sourceTree = "<group>"; };
 		638F03794D507F3C157438B5 /* MZMazeTileEmitter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MZMazeTileEmitter.m; sourceTree = "<group>"; };
+		638F04392EF24EFD7204DA48 /* MZStopedComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MZStopedComponent.h; sourceTree = "<group>"; };
+		638F050331680FD70D1A3A4F /* MZCharacterConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MZCharacterConstants.h; sourceTree = "<group>"; };
+		638F051DFAF8E138B499EF5D /* MZDisplayCharacterSystem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MZDisplayCharacterSystem.m; sourceTree = "<group>"; };
 		638F052E2E5657BD51CA3E7D /* MZComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MZComponent.h; sourceTree = "<group>"; };
-		638F05662816D34985463818 /* MZRootSystem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MZRootSystem.h; sourceTree = "<group>"; };
+		638F05738D95FB19DA585A7F /* MZBigDotComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MZBigDotComponent.h; sourceTree = "<group>"; };
+		638F059CA24D1ACD98668E5B /* MZDotComponent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MZDotComponent.m; sourceTree = "<group>"; };
+		638F06436C9AB96183C8DD6F /* MZMovingDirectionComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MZMovingDirectionComponent.h; sourceTree = "<group>"; };
 		638F068163CBD507AF02538C /* MZMazeTileEmitter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MZMazeTileEmitter.h; sourceTree = "<group>"; };
+		638F06D846C9FE460F2629A5 /* MZWishMovingDirectionComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MZWishMovingDirectionComponent.h; sourceTree = "<group>"; };
+		638F06EDABF284B3A730FC52 /* MZMazeMetricsComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MZMazeMetricsComponent.h; sourceTree = "<group>"; };
+		638F06FED6FC935092813CD4 /* MZMazeTileComponent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MZMazeTileComponent.m; sourceTree = "<group>"; };
 		638F07EF4E7811B90E67FFD7 /* MZGameScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MZGameScene.m; sourceTree = "<group>"; };
 		638F08087087579AF04AF942 /* MZSpriteKitNodeComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MZSpriteKitNodeComponent.h; sourceTree = "<group>"; };
 		638F08A0D3F15D5F616B265D /* maze.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = maze.txt; sourceTree = "<group>"; };
+		638F09111194740269334441 /* MZCharacterMovingSystem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MZCharacterMovingSystem.h; sourceTree = "<group>"; };
+		638F096D75973054D0FD8ECF /* MZGateComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MZGateComponent.h; sourceTree = "<group>"; };
+		638F09B03261A1946F758E5E /* MZGateComponent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MZGateComponent.m; sourceTree = "<group>"; };
 		638F0A0D3879CBE7DDCB3E92 /* MZDisplayMazeTilesSystem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MZDisplayMazeTilesSystem.h; sourceTree = "<group>"; };
+		638F0A61B31F83F036DBEAD7 /* MZStopedComponent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MZStopedComponent.m; sourceTree = "<group>"; };
 		638F0B005E2BF07078E8BC3E /* MZDisplayMazeTilesSystem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MZDisplayMazeTilesSystem.m; sourceTree = "<group>"; };
+		638F0B403E3DDCB401ECFDCA /* MZPacManComponent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MZPacManComponent.m; sourceTree = "<group>"; };
+		638F0B595FF6A7F913BD7D05 /* MZMazeConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MZMazeConstants.h; sourceTree = "<group>"; };
 		638F0B5AD3AE603AAEEEF9F8 /* MZSpriteKitNodeComponent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MZSpriteKitNodeComponent.m; sourceTree = "<group>"; };
+		638F0BA57823F196E5ED8C96 /* MZWishMovingDirectionComponent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MZWishMovingDirectionComponent.m; sourceTree = "<group>"; };
+		638F0BAA9203EF67DE488514 /* MZMazeTileComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MZMazeTileComponent.h; sourceTree = "<group>"; };
 		638F0BBE4A75D6A51B047C54 /* MZGameScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MZGameScene.h; sourceTree = "<group>"; };
+		638F0C5EA0A86106BE26B93F /* MZDirection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MZDirection.h; sourceTree = "<group>"; };
 		638F0C76B0DBC5B65CDCCE45 /* MZNotWalkableComponent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MZNotWalkableComponent.m; sourceTree = "<group>"; };
+		638F0CBE491DE664EBE1A040 /* MZPacManComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MZPacManComponent.h; sourceTree = "<group>"; };
+		638F0CD90BB20AC3F7B198B6 /* MZMovingDirectionComponent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MZMovingDirectionComponent.m; sourceTree = "<group>"; };
 		638F0D56DB5D245A828455BB /* ESEntityRepository+Singleton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ESEntityRepository+Singleton.m"; sourceTree = "<group>"; };
 		638F0D9ED7D577F4B8B07C69 /* MZNotWalkableComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MZNotWalkableComponent.h; sourceTree = "<group>"; };
-		638F0E038BC3C2BEAC186E9B /* MZRootSystem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MZRootSystem.m; sourceTree = "<group>"; };
+		638F0DA848BB0C7DC1696F37 /* MZDisplayCharacterSystem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MZDisplayCharacterSystem.h; sourceTree = "<group>"; };
 		638F0E3A58AC60666E5C9E84 /* MZPositionComponent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MZPositionComponent.m; sourceTree = "<group>"; };
 		638F0F5332A5298F4FAFA1F6 /* MZGameSceneComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MZGameSceneComponent.h; sourceTree = "<group>"; };
 		638F0FD26DE2184856407C56 /* MZGameSceneComponent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MZGameSceneComponent.m; sourceTree = "<group>"; };
@@ -170,14 +205,12 @@
 				0B4A665F190C1B1900C0498C /* Main.storyboard */,
 				0B4A6662190C1B1900C0498C /* MZGameViewController.h */,
 				0B4A6663190C1B1900C0498C /* MZGameViewController.m */,
-				0B4A6668190C1B1900C0498C /* Spaceship.png */,
 				0B4A666A190C1B1900C0498C /* Images.xcassets */,
 				0B4A6654190C1B1900C0498C /* Supporting Files */,
 				638F0BC96C09D9BA6C61702B /* EntitasExtension */,
-				638F0E038BC3C2BEAC186E9B /* MZRootSystem.m */,
-				638F05662816D34985463818 /* MZRootSystem.h */,
 				638F0226761E4D7B94376F66 /* Maze */,
 				638F087E7210418D97CFBD0F /* Scene */,
+				638F0004BA3C695CED48D501 /* Character */,
 			);
 			path = EPacMan;
 			sourceTree = "<group>";
@@ -222,6 +255,27 @@
 			path = Assets;
 			sourceTree = "<group>";
 		};
+		638F0004BA3C695CED48D501 /* Character */ = {
+			isa = PBXGroup;
+			children = (
+				638F0B403E3DDCB401ECFDCA /* MZPacManComponent.m */,
+				638F0CBE491DE664EBE1A040 /* MZPacManComponent.h */,
+				638F051DFAF8E138B499EF5D /* MZDisplayCharacterSystem.m */,
+				638F0DA848BB0C7DC1696F37 /* MZDisplayCharacterSystem.h */,
+				638F0CD90BB20AC3F7B198B6 /* MZMovingDirectionComponent.m */,
+				638F06436C9AB96183C8DD6F /* MZMovingDirectionComponent.h */,
+				638F0C5EA0A86106BE26B93F /* MZDirection.h */,
+				638F0A61B31F83F036DBEAD7 /* MZStopedComponent.m */,
+				638F04392EF24EFD7204DA48 /* MZStopedComponent.h */,
+				638F000BEE3F3C0EEED97C30 /* MZCharacterMovingSystem.m */,
+				638F09111194740269334441 /* MZCharacterMovingSystem.h */,
+				638F0BA57823F196E5ED8C96 /* MZWishMovingDirectionComponent.m */,
+				638F06D846C9FE460F2629A5 /* MZWishMovingDirectionComponent.h */,
+				638F050331680FD70D1A3A4F /* MZCharacterConstants.h */,
+			);
+			path = Character;
+			sourceTree = "<group>";
+		};
 		638F0226761E4D7B94376F66 /* Maze */ = {
 			isa = PBXGroup;
 			children = (
@@ -236,6 +290,19 @@
 				638F0A0D3879CBE7DDCB3E92 /* MZDisplayMazeTilesSystem.h */,
 				638F0B5AD3AE603AAEEEF9F8 /* MZSpriteKitNodeComponent.m */,
 				638F08087087579AF04AF942 /* MZSpriteKitNodeComponent.h */,
+				638F059CA24D1ACD98668E5B /* MZDotComponent.m */,
+				638F0300F3528684F4F3E377 /* MZDotComponent.h */,
+				638F026DDFE9E19070E418EF /* MZBigDotComponent.m */,
+				638F05738D95FB19DA585A7F /* MZBigDotComponent.h */,
+				638F09B03261A1946F758E5E /* MZGateComponent.m */,
+				638F096D75973054D0FD8ECF /* MZGateComponent.h */,
+				638F06FED6FC935092813CD4 /* MZMazeTileComponent.m */,
+				638F0BAA9203EF67DE488514 /* MZMazeTileComponent.h */,
+				638F0B595FF6A7F913BD7D05 /* MZMazeConstants.h */,
+				0BA12CD01911B52E00D0BFEB /* MZTileMap.h */,
+				0BA12CD11911B52E00D0BFEB /* MZTileMap.m */,
+				638F01C5C0FB51046C56BDC0 /* MZMazeMetricsComponent.m */,
+				638F06EDABF284B3A730FC52 /* MZMazeMetricsComponent.h */,
 			);
 			path = Maze;
 			sourceTree = "<group>";
@@ -344,12 +411,12 @@
 				0B4A6658190C1B1900C0498C /* InfoPlist.strings in Resources */,
 				0B4A666B190C1B1900C0498C /* Images.xcassets in Resources */,
 				0B4A668E190D472400C0498C /* right.png in Resources */,
-				0B4A6669190C1B1900C0498C /* Spaceship.png in Resources */,
 				0B4A6661190C1B1900C0498C /* Main.storyboard in Resources */,
 				638F0CC9D5A6FA7C5CA8ED18 /* maze.txt in Resources */,
 				0B4A668F190D472400C0498C /* up.png in Resources */,
 				0B4A668D190D472400C0498C /* left.png in Resources */,
 				0B4A668C190D472400C0498C /* down.png in Resources */,
+				638F09B22A85656846FA7D22 /* MZCharacterConstants.h in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -405,7 +472,6 @@
 				0B4A665A190C1B1900C0498C /* main.m in Sources */,
 				0B4A665E190C1B1900C0498C /* MZAppDelegate.m in Sources */,
 				638F03C9D77CBA290FA6CB99 /* ESEntityRepository+Singleton.m in Sources */,
-				638F01E6AF7BBC63974D2514 /* MZRootSystem.m in Sources */,
 				638F076E8E3D9FEE6ECFDC14 /* MZMazeTileEmitter.m in Sources */,
 				638F0D0005FD35194C4FBE91 /* MZPositionComponent.m in Sources */,
 				638F0B7A7F4D6556814804E0 /* MZNotWalkableComponent.m in Sources */,
@@ -414,6 +480,18 @@
 				638F0F06B4075B06B8379B8E /* MZSpriteKitNodeComponent.m in Sources */,
 				638F025CA37D50D301B85FDD /* MZGameScene.m in Sources */,
 				638F0D1AA283B4B45F923FA1 /* MZGameSceneComponent.m in Sources */,
+				638F0E722889CDB417B26FFC /* MZPacManComponent.m in Sources */,
+				0BA12CD21911B52E00D0BFEB /* MZTileMap.m in Sources */,
+				638F0ED5AE2D28075CC54A94 /* MZDotComponent.m in Sources */,
+				638F0F6894CF76C9AEDE83FA /* MZBigDotComponent.m in Sources */,
+				638F0390DC17B8034B1DB747 /* MZGateComponent.m in Sources */,
+				638F0C29227855BD467FB491 /* MZMazeTileComponent.m in Sources */,
+				638F0F14832BED8E61FB6C30 /* MZDisplayCharacterSystem.m in Sources */,
+				638F08ECBDF92D7239DE5AC4 /* MZMovingDirectionComponent.m in Sources */,
+				638F03E19008B6EA974C23A5 /* MZStopedComponent.m in Sources */,
+				638F084AEC8F584A0ECC62A7 /* MZCharacterMovingSystem.m in Sources */,
+				638F0BEDB093BA9C208142E8 /* MZWishMovingDirectionComponent.m in Sources */,
+				638F07AA8536019FC1D59912 /* MZMazeMetricsComponent.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

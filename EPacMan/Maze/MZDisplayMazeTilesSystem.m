@@ -6,11 +6,8 @@
 #import "MZGameSceneComponent.h"
 #import "MZSpriteKitNodeComponent.h"
 #import "MZNotWalkableComponent.h"
-
-#define TILE_WIDTH 10
-#define TILE_HEIGHT 10
-
-
+#import "MZMazeTileComponent.h"
+#import "MZMazeConstants.h"
 
 @implementation MZDisplayMazeTilesSystem {
     ESRepositoryObserver *_observer;
@@ -20,7 +17,8 @@
 - (id)init {
     self = [super init];
     if (self) {
-        _observer = [[ESRepositoryObserver alloc] initWithRepository:[ESEntityRepository sharedRepository] matcher:[MZPositionComponent matcher]];
+        _observer = [[ESRepositoryObserver alloc] initWithRepository:[ESEntityRepository sharedRepository]
+                                                             matcher:[ESMatcher allOf:[MZPositionComponent class], [MZMazeTileComponent class], nil]];
         _repository = [ESEntityRepository sharedRepository];
     }
 
@@ -40,11 +38,12 @@
 
     for (ESEntity *mazeTile in freshCreatedMazeTiles){
         MZPositionComponent *positionComponent = getComponent(mazeTile, MZPositionComponent);
-        UIColor *color = [mazeTile hasComponentOfType:[MZNotWalkableComponent class]]? [SKColor yellowColor] : [SKColor grayColor];
+        UIColor *color = [mazeTile hasComponentOfType:[MZNotWalkableComponent class]]? [SKColor blueColor] : [SKColor blackColor];
         SKSpriteNode *node = [SKSpriteNode spriteNodeWithColor:color size:CGSizeMake(TILE_WIDTH, TILE_HEIGHT)];
         node.anchorPoint = CGPointMake(0, 1);
         node.position = CGPointMake(positionComponent.position.x * TILE_WIDTH, positionComponent.position.y * TILE_HEIGHT);
         [scene addChild:node];
+        [mazeTile addComponent:[MZSpriteKitNodeComponent componentWithNode:node]];
     }
 }
 

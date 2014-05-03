@@ -35,6 +35,9 @@
                                 <state key="normal" image="up.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="up:" destination="LVB-YS-i5n" eventType="touchDown" id="Mol-aO-YiB"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sZ9-eD-8r7" userLabel="up1">
                                 <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
@@ -46,6 +49,9 @@
                                 <state key="normal" image="up.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="up:" destination="LVB-YS-i5n" eventType="touchDown" id="Pie-dg-b3v"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wsT-mG-Cww" userLabel="left">
                                 <rect key="frame" x="0.0" y="100" width="80" height="80"/>
@@ -57,6 +63,9 @@
                                 <state key="normal" image="left.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="left:" destination="LVB-YS-i5n" eventType="touchDown" id="nyc-gi-zBK"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M8o-zT-biv" userLabel="right">
                                 <rect key="frame" x="400" y="100" width="80" height="80"/>
@@ -68,6 +77,9 @@
                                 <state key="normal" image="right.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="right:" destination="LVB-YS-i5n" eventType="touchDown" id="8BL-3S-Q6e"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jgF-Gg-Nx9" userLabel="down2">
                                 <rect key="frame" x="400" y="200" width="80" height="80"/>
@@ -79,6 +91,9 @@
                                 <state key="normal" image="down.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="down:" destination="LVB-YS-i5n" eventType="touchDown" id="11C-h1-zH0"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MxQ-bQ-hD9" userLabel="down1">
                                 <rect key="frame" x="0.0" y="200" width="80" height="80"/>
@@ -90,6 +105,9 @@
                                 <state key="normal" image="down.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="down:" destination="LVB-YS-i5n" eventType="touchDown" id="IRw-xD-T7a"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
