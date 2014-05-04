@@ -40,6 +40,10 @@
     return self;
 }
 
+-(void)reset{
+    [_map removeAllObjects];
+}
+
 - (void)entity:(ESEntity *)changedEntity changedInCollection:(ESCollection *)collection withChangeType:(ESEntityChange)changeType {
     MZPositionComponent *positionComponent = getComponent(changedEntity, MZPositionComponent);
     NSNumber *mapIndex = @(positionComponent.position.x + (positionComponent.position.y * 21));
@@ -47,6 +51,12 @@
 }
 
 - (ESEntity *)tileEntityAtPosition:(CGPoint)position{
+    if(position.x<0 || position.y<0){
+        return nil;
+    }
+    if(position.x>20){
+        return nil;
+    }
     NSNumber *mapIndex = @(position.x + (position.y * 21));
     return _map[mapIndex];
 }

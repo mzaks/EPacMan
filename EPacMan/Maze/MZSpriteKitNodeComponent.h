@@ -1,4 +1,5 @@
 #import <Foundation/Foundation.h>
+#import <SpriteKit/SpriteKit.h>
 #import "MZComponent.h"
 
 @class SKSpriteNode;

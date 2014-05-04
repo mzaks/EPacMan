@@ -27,18 +27,40 @@
 		0B4A668E190D472400C0498C /* right.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B4A668A190D472400C0498C /* right.png */; };
 		0B4A668F190D472400C0498C /* up.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B4A668B190D472400C0498C /* up.png */; };
 		0BA12CD21911B52E00D0BFEB /* MZTileMap.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BA12CD11911B52E00D0BFEB /* MZTileMap.m */; };
+		0BA12CE6191637D400D0BFEB /* big_dot.png in Resources */ = {isa = PBXBuildFile; fileRef = 0BA12CD3191637D400D0BFEB /* big_dot.png */; };
+		0BA12CE7191637D400D0BFEB /* ghost.png in Resources */ = {isa = PBXBuildFile; fileRef = 0BA12CD4191637D400D0BFEB /* ghost.png */; };
+		0BA12CE8191637D400D0BFEB /* dot.png in Resources */ = {isa = PBXBuildFile; fileRef = 0BA12CD5191637D400D0BFEB /* dot.png */; };
+		0BA12CE9191637D400D0BFEB /* tile0000.png in Resources */ = {isa = PBXBuildFile; fileRef = 0BA12CD6191637D400D0BFEB /* tile0000.png */; };
+		0BA12CEA191637D400D0BFEB /* tile0001.png in Resources */ = {isa = PBXBuildFile; fileRef = 0BA12CD7191637D400D0BFEB /* tile0001.png */; };
+		0BA12CEB191637D400D0BFEB /* tile0010.png in Resources */ = {isa = PBXBuildFile; fileRef = 0BA12CD8191637D400D0BFEB /* tile0010.png */; };
+		0BA12CEC191637D400D0BFEB /* tile0011.png in Resources */ = {isa = PBXBuildFile; fileRef = 0BA12CD9191637D400D0BFEB /* tile0011.png */; };
+		0BA12CED191637D400D0BFEB /* tile0100.png in Resources */ = {isa = PBXBuildFile; fileRef = 0BA12CDA191637D400D0BFEB /* tile0100.png */; };
+		0BA12CEE191637D400D0BFEB /* tile0101.png in Resources */ = {isa = PBXBuildFile; fileRef = 0BA12CDB191637D400D0BFEB /* tile0101.png */; };
+		0BA12CEF191637D400D0BFEB /* tile0110.png in Resources */ = {isa = PBXBuildFile; fileRef = 0BA12CDC191637D400D0BFEB /* tile0110.png */; };
+		0BA12CF0191637D400D0BFEB /* tile0111.png in Resources */ = {isa = PBXBuildFile; fileRef = 0BA12CDD191637D400D0BFEB /* tile0111.png */; };
+		0BA12CF1191637D400D0BFEB /* tile1000.png in Resources */ = {isa = PBXBuildFile; fileRef = 0BA12CDE191637D400D0BFEB /* tile1000.png */; };
+		0BA12CF2191637D400D0BFEB /* tile1001.png in Resources */ = {isa = PBXBuildFile; fileRef = 0BA12CDF191637D400D0BFEB /* tile1001.png */; };
+		0BA12CF3191637D400D0BFEB /* tile1010.png in Resources */ = {isa = PBXBuildFile; fileRef = 0BA12CE0191637D400D0BFEB /* tile1010.png */; };
+		0BA12CF4191637D400D0BFEB /* tile1011.png in Resources */ = {isa = PBXBuildFile; fileRef = 0BA12CE1191637D400D0BFEB /* tile1011.png */; };
+		0BA12CF5191637D400D0BFEB /* tile1100.png in Resources */ = {isa = PBXBuildFile; fileRef = 0BA12CE2191637D400D0BFEB /* tile1100.png */; };
+		0BA12CF6191637D400D0BFEB /* tile1101.png in Resources */ = {isa = PBXBuildFile; fileRef = 0BA12CE3191637D400D0BFEB /* tile1101.png */; };
+		0BA12CF7191637D400D0BFEB /* tile1110.png in Resources */ = {isa = PBXBuildFile; fileRef = 0BA12CE4191637D400D0BFEB /* tile1110.png */; };
+		0BA12CF8191637D400D0BFEB /* tile1111.png in Resources */ = {isa = PBXBuildFile; fileRef = 0BA12CE5191637D400D0BFEB /* tile1111.png */; };
 		638F0112E79F9338C7A5BBED /* MZStopedComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = 638F0520E5EC1AD0F94E8452 /* MZStopedComponent.m */; };
 		638F016EB5296DCBC5ABDB1B /* MZDisplayMazeTilesSystem.m in Sources */ = {isa = PBXBuildFile; fileRef = 638F0B005E2BF07078E8BC3E /* MZDisplayMazeTilesSystem.m */; };
 		638F025CA37D50D301B85FDD /* MZGameScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 638F07EF4E7811B90E67FFD7 /* MZGameScene.m */; };
 		638F0390DC17B8034B1DB747 /* MZGateComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = 638F09B03261A1946F758E5E /* MZGateComponent.m */; };
 		638F03C773A1EDAAA8D62544 /* MZComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = 638F02451BE840AC6BA2EA3C /* MZComponent.m */; };
 		638F03C9D77CBA290FA6CB99 /* ESEntityRepository+Singleton.m in Sources */ = {isa = PBXBuildFile; fileRef = 638F0D56DB5D245A828455BB /* ESEntityRepository+Singleton.m */; };
+		638F04B9369B0F357B8AD19D /* MZCollectDotsSystem.m in Sources */ = {isa = PBXBuildFile; fileRef = 638F08952A64E3F535E99A30 /* MZCollectDotsSystem.m */; };
 		638F0555069154237323648B /* MZMovingComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = 638F0666271BD9186745342F /* MZMovingComponent.m */; };
+		638F0684A8DB58EB15BABA2E /* MZUpdateTileViewOnDotRemovalSystem.m in Sources */ = {isa = PBXBuildFile; fileRef = 638F03D6B420BDA05AB2759A /* MZUpdateTileViewOnDotRemovalSystem.m */; };
 		638F076E8E3D9FEE6ECFDC14 /* MZMazeTileEmitter.m in Sources */ = {isa = PBXBuildFile; fileRef = 638F03794D507F3C157438B5 /* MZMazeTileEmitter.m */; };
 		638F07AA8536019FC1D59912 /* MZMazeMetricsComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = 638F01C5C0FB51046C56BDC0 /* MZMazeMetricsComponent.m */; };
 		638F08EC646531C7F85CEB6C /* MZMovingSystem.m in Sources */ = {isa = PBXBuildFile; fileRef = 638F0AE0B9612F26B010B639 /* MZMovingSystem.m */; };
 		638F093CAD781E2F9D169CCC /* MZStopSystem.m in Sources */ = {isa = PBXBuildFile; fileRef = 638F071AA943EA8F8A5FB4FF /* MZStopSystem.m */; };
 		638F0B7A7F4D6556814804E0 /* MZNotWalkableComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = 638F0C76B0DBC5B65CDCCE45 /* MZNotWalkableComponent.m */; };
+		638F0BB5E7DA1CAA3270399F /* MZCheckWinSystem.m in Sources */ = {isa = PBXBuildFile; fileRef = 638F0F96E9FD02F2BF55971D /* MZCheckWinSystem.m */; };
 		638F0C29227855BD467FB491 /* MZMazeTileComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = 638F06FED6FC935092813CD4 /* MZMazeTileComponent.m */; };
 		638F0CC9D5A6FA7C5CA8ED18 /* maze.txt in Resources */ = {isa = PBXBuildFile; fileRef = 638F08A0D3F15D5F616B265D /* maze.txt */; };
 		638F0D0005FD35194C4FBE91 /* MZPositionComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = 638F0E3A58AC60666E5C9E84 /* MZPositionComponent.m */; };
@@ -91,6 +113,25 @@
 		0B4A668B190D472400C0498C /* up.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = up.png; sourceTree = "<group>"; };
 		0BA12CD01911B52E00D0BFEB /* MZTileMap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MZTileMap.h; sourceTree = "<group>"; };
 		0BA12CD11911B52E00D0BFEB /* MZTileMap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MZTileMap.m; sourceTree = "<group>"; };
+		0BA12CD3191637D400D0BFEB /* big_dot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = big_dot.png; sourceTree = "<group>"; };
+		0BA12CD4191637D400D0BFEB /* ghost.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ghost.png; sourceTree = "<group>"; };
+		0BA12CD5191637D400D0BFEB /* dot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dot.png; sourceTree = "<group>"; };
+		0BA12CD6191637D400D0BFEB /* tile0000.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tile0000.png; sourceTree = "<group>"; };
+		0BA12CD7191637D400D0BFEB /* tile0001.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tile0001.png; sourceTree = "<group>"; };
+		0BA12CD8191637D400D0BFEB /* tile0010.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tile0010.png; sourceTree = "<group>"; };
+		0BA12CD9191637D400D0BFEB /* tile0011.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tile0011.png; sourceTree = "<group>"; };
+		0BA12CDA191637D400D0BFEB /* tile0100.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tile0100.png; sourceTree = "<group>"; };
+		0BA12CDB191637D400D0BFEB /* tile0101.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tile0101.png; sourceTree = "<group>"; };
+		0BA12CDC191637D400D0BFEB /* tile0110.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tile0110.png; sourceTree = "<group>"; };
+		0BA12CDD191637D400D0BFEB /* tile0111.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tile0111.png; sourceTree = "<group>"; };
+		0BA12CDE191637D400D0BFEB /* tile1000.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tile1000.png; sourceTree = "<group>"; };
+		0BA12CDF191637D400D0BFEB /* tile1001.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tile1001.png; sourceTree = "<group>"; };
+		0BA12CE0191637D400D0BFEB /* tile1010.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tile1010.png; sourceTree = "<group>"; };
+		0BA12CE1191637D400D0BFEB /* tile1011.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tile1011.png; sourceTree = "<group>"; };
+		0BA12CE2191637D400D0BFEB /* tile1100.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tile1100.png; sourceTree = "<group>"; };
+		0BA12CE3191637D400D0BFEB /* tile1101.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tile1101.png; sourceTree = "<group>"; };
+		0BA12CE4191637D400D0BFEB /* tile1110.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tile1110.png; sourceTree = "<group>"; };
+		0BA12CE5191637D400D0BFEB /* tile1111.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tile1111.png; sourceTree = "<group>"; };
 		0EB59A553BB14C6FBAD2CB0B /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 		26F0E1DF73804C419A02359C /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		638F0138025E510518859615 /* MZStopedComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MZStopedComponent.h; sourceTree = "<group>"; };
@@ -105,6 +146,9 @@
 		638F0331042C33F4E2DE20D2 /* ESEntityRepository+Singleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ESEntityRepository+Singleton.h"; sourceTree = "<group>"; };
 		638F03794D507F3C157438B5 /* MZMazeTileEmitter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MZMazeTileEmitter.m; sourceTree = "<group>"; };
 		638F038497688C01083B11E3 /* MZDirection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MZDirection.h; sourceTree = "<group>"; };
+		638F03D6B420BDA05AB2759A /* MZUpdateTileViewOnDotRemovalSystem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MZUpdateTileViewOnDotRemovalSystem.m; sourceTree = "<group>"; };
+		638F048FE09C39B5901C29D5 /* MZUpdateTileViewOnDotRemovalSystem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MZUpdateTileViewOnDotRemovalSystem.h; sourceTree = "<group>"; };
+		638F04C878E29B2A9EC51A55 /* MZCollectDotsSystem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MZCollectDotsSystem.h; sourceTree = "<group>"; };
 		638F0500926B0902EDC439A0 /* MZMovingAnimationSystem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MZMovingAnimationSystem.h; sourceTree = "<group>"; };
 		638F051DFAF8E138B499EF5D /* MZDisplayCharacterSystem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MZDisplayCharacterSystem.m; sourceTree = "<group>"; };
 		638F0520E5EC1AD0F94E8452 /* MZStopedComponent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MZStopedComponent.m; sourceTree = "<group>"; };
@@ -118,7 +162,9 @@
 		638F071AA943EA8F8A5FB4FF /* MZStopSystem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MZStopSystem.m; sourceTree = "<group>"; };
 		638F07EF4E7811B90E67FFD7 /* MZGameScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MZGameScene.m; sourceTree = "<group>"; };
 		638F08087087579AF04AF942 /* MZSpriteKitNodeComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MZSpriteKitNodeComponent.h; sourceTree = "<group>"; };
+		638F08952A64E3F535E99A30 /* MZCollectDotsSystem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MZCollectDotsSystem.m; sourceTree = "<group>"; };
 		638F08A0D3F15D5F616B265D /* maze.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = maze.txt; sourceTree = "<group>"; };
+		638F093214D2969F06B633EE /* MZCheckWinSystem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MZCheckWinSystem.h; sourceTree = "<group>"; };
 		638F096D75973054D0FD8ECF /* MZGateComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MZGateComponent.h; sourceTree = "<group>"; };
 		638F09A5BD129C3A337CD46A /* MZSimulationConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MZSimulationConstants.h; sourceTree = "<group>"; };
 		638F09B03261A1946F758E5E /* MZGateComponent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MZGateComponent.m; sourceTree = "<group>"; };
@@ -141,6 +187,7 @@
 		638F0E3A58AC60666E5C9E84 /* MZPositionComponent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MZPositionComponent.m; sourceTree = "<group>"; };
 		638F0F074E4E545A521AA081 /* MZWishDirectionComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MZWishDirectionComponent.h; sourceTree = "<group>"; };
 		638F0F5332A5298F4FAFA1F6 /* MZGameSceneComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MZGameSceneComponent.h; sourceTree = "<group>"; };
+		638F0F96E9FD02F2BF55971D /* MZCheckWinSystem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MZCheckWinSystem.m; sourceTree = "<group>"; };
 		638F0FABE6CE60A68579D292 /* MZTickComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MZTickComponent.h; sourceTree = "<group>"; };
 		638F0FD26DE2184856407C56 /* MZGameSceneComponent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MZGameSceneComponent.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -221,6 +268,7 @@
 				638F0004BA3C695CED48D501 /* Character */,
 				638F03A0DF72E697DEBE1FE7 /* Simulation */,
 				638F08514463DA93325FB8C6 /* Moving */,
+				638F095C9FE5048CC04512A5 /* Rewards */,
 			);
 			path = EPacMan;
 			sourceTree = "<group>";
@@ -257,6 +305,25 @@
 		0B4A6687190D472400C0498C /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				0BA12CD3191637D400D0BFEB /* big_dot.png */,
+				0BA12CD4191637D400D0BFEB /* ghost.png */,
+				0BA12CD5191637D400D0BFEB /* dot.png */,
+				0BA12CD6191637D400D0BFEB /* tile0000.png */,
+				0BA12CD7191637D400D0BFEB /* tile0001.png */,
+				0BA12CD8191637D400D0BFEB /* tile0010.png */,
+				0BA12CD9191637D400D0BFEB /* tile0011.png */,
+				0BA12CDA191637D400D0BFEB /* tile0100.png */,
+				0BA12CDB191637D400D0BFEB /* tile0101.png */,
+				0BA12CDC191637D400D0BFEB /* tile0110.png */,
+				0BA12CDD191637D400D0BFEB /* tile0111.png */,
+				0BA12CDE191637D400D0BFEB /* tile1000.png */,
+				0BA12CDF191637D400D0BFEB /* tile1001.png */,
+				0BA12CE0191637D400D0BFEB /* tile1010.png */,
+				0BA12CE1191637D400D0BFEB /* tile1011.png */,
+				0BA12CE2191637D400D0BFEB /* tile1100.png */,
+				0BA12CE3191637D400D0BFEB /* tile1101.png */,
+				0BA12CE4191637D400D0BFEB /* tile1110.png */,
+				0BA12CE5191637D400D0BFEB /* tile1111.png */,
 				0B4A6688190D472400C0498C /* down.png */,
 				0B4A6689190D472400C0498C /* left.png */,
 				0B4A668A190D472400C0498C /* right.png */,
@@ -346,6 +413,19 @@
 				638F0F5332A5298F4FAFA1F6 /* MZGameSceneComponent.h */,
 			);
 			path = Scene;
+			sourceTree = "<group>";
+		};
+		638F095C9FE5048CC04512A5 /* Rewards */ = {
+			isa = PBXGroup;
+			children = (
+				638F08952A64E3F535E99A30 /* MZCollectDotsSystem.m */,
+				638F04C878E29B2A9EC51A55 /* MZCollectDotsSystem.h */,
+				638F03D6B420BDA05AB2759A /* MZUpdateTileViewOnDotRemovalSystem.m */,
+				638F048FE09C39B5901C29D5 /* MZUpdateTileViewOnDotRemovalSystem.h */,
+				638F0F96E9FD02F2BF55971D /* MZCheckWinSystem.m */,
+				638F093214D2969F06B633EE /* MZCheckWinSystem.h */,
+			);
+			path = Rewards;
 			sourceTree = "<group>";
 		};
 		638F0BC96C09D9BA6C61702B /* EntitasExtension */ = {
@@ -438,13 +518,32 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0BA12CF4191637D400D0BFEB /* tile1011.png in Resources */,
+				0BA12CE6191637D400D0BFEB /* big_dot.png in Resources */,
+				0BA12CEC191637D400D0BFEB /* tile0011.png in Resources */,
+				0BA12CEE191637D400D0BFEB /* tile0101.png in Resources */,
+				0BA12CF3191637D400D0BFEB /* tile1010.png in Resources */,
+				0BA12CE9191637D400D0BFEB /* tile0000.png in Resources */,
+				0BA12CE7191637D400D0BFEB /* ghost.png in Resources */,
 				0B4A6658190C1B1900C0498C /* InfoPlist.strings in Resources */,
 				0B4A666B190C1B1900C0498C /* Images.xcassets in Resources */,
+				0BA12CF8191637D400D0BFEB /* tile1111.png in Resources */,
+				0BA12CEF191637D400D0BFEB /* tile0110.png in Resources */,
+				0BA12CF6191637D400D0BFEB /* tile1101.png in Resources */,
 				0B4A668E190D472400C0498C /* right.png in Resources */,
+				0BA12CF2191637D400D0BFEB /* tile1001.png in Resources */,
 				0B4A6661190C1B1900C0498C /* Main.storyboard in Resources */,
+				0BA12CF1191637D400D0BFEB /* tile1000.png in Resources */,
 				638F0CC9D5A6FA7C5CA8ED18 /* maze.txt in Resources */,
+				0BA12CF5191637D400D0BFEB /* tile1100.png in Resources */,
 				0B4A668F190D472400C0498C /* up.png in Resources */,
+				0BA12CE8191637D400D0BFEB /* dot.png in Resources */,
+				0BA12CEA191637D400D0BFEB /* tile0001.png in Resources */,
+				0BA12CF0191637D400D0BFEB /* tile0111.png in Resources */,
 				0B4A668D190D472400C0498C /* left.png in Resources */,
+				0BA12CEB191637D400D0BFEB /* tile0010.png in Resources */,
+				0BA12CED191637D400D0BFEB /* tile0100.png in Resources */,
+				0BA12CF7191637D400D0BFEB /* tile1110.png in Resources */,
 				0B4A668C190D472400C0498C /* down.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -524,6 +623,9 @@
 				638F0555069154237323648B /* MZMovingComponent.m in Sources */,
 				638F0D644EFB45C0183AA4E8 /* MZMovingAnimationSystem.m in Sources */,
 				638F093CAD781E2F9D169CCC /* MZStopSystem.m in Sources */,
+				638F04B9369B0F357B8AD19D /* MZCollectDotsSystem.m in Sources */,
+				638F0684A8DB58EB15BABA2E /* MZUpdateTileViewOnDotRemovalSystem.m in Sources */,
+				638F0BB5E7DA1CAA3270399F /* MZCheckWinSystem.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

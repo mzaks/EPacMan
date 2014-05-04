@@ -10,4 +10,5 @@
 
 @interface MZGameScene : SKScene
 
+- (void)reset;
 @end

@@ -15,6 +15,8 @@
 
 + (instancetype)sharedMap;
 
+- (void)reset;
+
 - (ESEntity *)tileEntityAtPosition:(CGPoint)position;
 
 - (ESEntity *)tileEntityInDirection:(MZDirection)direction fromEntityWithPosition:(ESEntity *)entity;

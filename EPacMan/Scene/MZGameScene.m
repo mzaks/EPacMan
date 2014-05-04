@@ -20,6 +20,9 @@
 #import "MZTickComponent.h"
 #import "MZMovingAnimationSystem.h"
 #import "MZStopSystem.h"
+#import "MZCollectDotsSystem.h"
+#import "MZUpdateTileViewOnDotRemovalSystem.h"
+#import "MZCheckWinSystem.h"
 
 @implementation MZGameScene {
     ESEntityRepository *_repo;
@@ -36,6 +39,21 @@
         [MZMazeTileEmitter readMazeDefinitionAndCreateMazeTileEntities];
     }
     return self;
+}
+
+- (void)reset {
+    [_rootSystem removeAllSystems];
+    for (ESEntity *entity in [_repo allEntities]) {
+        if([entity hasComponentOfType:[MZSpriteKitNodeComponent class]]){
+            [getComponent(entity, MZSpriteKitNodeComponent).node removeFromParent];
+        }
+        [_repo destroyEntity:entity];
+    }
+    [[MZTileMap sharedMap] reset];
+    [self createTickEntity];
+    [self createRootSystem];
+    [self createGameSceneEntity];
+    [MZMazeTileEmitter readMazeDefinitionAndCreateMazeTileEntities];
 }
 
 - (void)createTickEntity {
@@ -55,6 +73,9 @@
     [_rootSystem addSystem:[MZMovingSystem new]];
     [_rootSystem addSystem:[MZMovingAnimationSystem new]];
     [_rootSystem addSystem:[MZStopSystem new]];
+    [_rootSystem addSystem:[MZCollectDotsSystem new]];
+    [_rootSystem addSystem:[MZUpdateTileViewOnDotRemovalSystem new]];
+    [_rootSystem addSystem:[MZCheckWinSystem new]];
 }
 
 -(void)update:(CFTimeInterval)currentTime {
