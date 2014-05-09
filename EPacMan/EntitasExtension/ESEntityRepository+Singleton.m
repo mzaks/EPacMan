@@ -20,7 +20,7 @@
     ESCollection *collection = [self collectionForMatcher:matcher];
 
     NSUInteger count = collection.entities.count;
-    NSAssert(count <= 1, @"Should have maximum 1 instance of the singleton entity with component %@, instead: %ul", matcher, count);
+    NSAssert(count <= 1, @"Should have maximum 1 instance of the singleton entity with component %@, instead: %lul", matcher, (unsigned long)count);
 
     return [collection.entities firstObject];
 }
