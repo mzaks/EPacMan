@@ -70,26 +70,35 @@
 
 - (IBAction)up:(id)sender
 {
-    ESEntity *pacManEntity = [_repository singletonEntity:[MZPacManComponent matcher]];
-    [pacManEntity exchangeComponent:[MZWishDirectionComponent componentWithDirection:UP]];
+//    ESEntity *pacManEntity = [_repository singletonEntity:[MZPacManComponent matcher]];
+    for(ESEntity *pacManEntity in [_repository entitiesForMatcher:[MZPacManComponent matcher]]){
+        [pacManEntity exchangeComponent:[MZWishDirectionComponent componentWithDirection:UP]];
+    }
 }
 
 - (IBAction)down:(id)sender
 {
-    ESEntity *pacManEntity = [_repository singletonEntity:[MZPacManComponent matcher]];
-    [pacManEntity exchangeComponent:[MZWishDirectionComponent componentWithDirection:DOWN]];
+//    ESEntity *pacManEntity = [_repository singletonEntity:[MZPacManComponent matcher]];
+    for(ESEntity *pacManEntity in [_repository entitiesForMatcher:[MZPacManComponent matcher]]){
+        [pacManEntity exchangeComponent:[MZWishDirectionComponent componentWithDirection:DOWN]];
+    }
 }
 
 - (IBAction)right:(id)sender
 {
-    ESEntity *pacManEntity = [_repository singletonEntity:[MZPacManComponent matcher]];
-    [pacManEntity exchangeComponent:[MZWishDirectionComponent componentWithDirection:RIGHT]];
+//    ESEntity *pacManEntity = [_repository singletonEntity:[MZPacManComponent matcher]];
+    for(ESEntity *pacManEntity in [_repository entitiesForMatcher:[MZPacManComponent matcher]]){
+        [pacManEntity exchangeComponent:[MZWishDirectionComponent componentWithDirection:RIGHT]];
+    }
+
 }
 
 - (IBAction)left:(id)sender
 {
-    ESEntity *pacManEntity = [_repository singletonEntity:[MZPacManComponent matcher]];
-    [pacManEntity exchangeComponent:[MZWishDirectionComponent componentWithDirection:LEFT]];
+//    ESEntity *pacManEntity = [_repository singletonEntity:[MZPacManComponent matcher]];
+    for(ESEntity *pacManEntity in [_repository entitiesForMatcher:[MZPacManComponent matcher]]){
+        [pacManEntity exchangeComponent:[MZWishDirectionComponent componentWithDirection:LEFT]];
+    }
 }
 
 @end

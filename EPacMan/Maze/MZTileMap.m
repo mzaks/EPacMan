@@ -75,7 +75,7 @@
         return [self tileEntityDownFromTileEntity:positionComponent];
     }
 
-    NSAssert(NO, @"direction: %n unknown", direction);
+    NSAssert(NO, @"direction: %i unknown", direction);
 
     return nil;
 }

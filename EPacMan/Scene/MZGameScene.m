@@ -25,6 +25,9 @@
 #import "MZCheckWinSystem.h"
 #import "MZTimeDisplayingSystem.h"
 #import "MZGameViewController.h"
+#import "MZPacManEatPacManSystem.h"
+#import "MZGameOverPopupSystem.h"
+#import "MZGameOverComponent.h"
 
 @implementation MZGameScene {
     ESEntityRepository *_repo;
@@ -80,9 +83,15 @@
     [_rootSystem addSystem:[MZUpdateTileViewOnDotRemovalSystem new]];
     [_rootSystem addSystem:[MZCheckWinSystem new]];
     [_rootSystem addSystem:[MZTimeDisplayingSystem new]];
+    [_rootSystem addSystem:[MZPacManEatPacManSystem new]];
+    [_rootSystem addSystem:[MZGameOverPopupSystem new]];
+
 }
 
 -(void)update:(CFTimeInterval)currentTime {
+    if([_repo singletonEntity:[MZGameOverComponent matcher]]){
+        return;
+    }
     ESEntity *tickEntity = [_repo singletonEntity:[MZTickComponent matcher]];
     [_rootSystem execute];
     [tickEntity exchangeComponent:[MZTickComponent componentWithCurrentTick:getComponent(tickEntity, MZTickComponent ).currentTick + 1]];

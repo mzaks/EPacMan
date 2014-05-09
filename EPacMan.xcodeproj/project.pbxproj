@@ -55,9 +55,12 @@
 		638F03C9D77CBA290FA6CB99 /* ESEntityRepository+Singleton.m in Sources */ = {isa = PBXBuildFile; fileRef = 638F0D56DB5D245A828455BB /* ESEntityRepository+Singleton.m */; };
 		638F04B9369B0F357B8AD19D /* MZCollectDotsSystem.m in Sources */ = {isa = PBXBuildFile; fileRef = 638F08952A64E3F535E99A30 /* MZCollectDotsSystem.m */; };
 		638F0555069154237323648B /* MZMovingComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = 638F0666271BD9186745342F /* MZMovingComponent.m */; };
+		638F05745B18B09F265C73E2 /* MZPacManEatPacManSystem.m in Sources */ = {isa = PBXBuildFile; fileRef = 638F07C59E88CD2DCF4961E7 /* MZPacManEatPacManSystem.m */; };
 		638F0684A8DB58EB15BABA2E /* MZUpdateTileViewOnDotRemovalSystem.m in Sources */ = {isa = PBXBuildFile; fileRef = 638F03D6B420BDA05AB2759A /* MZUpdateTileViewOnDotRemovalSystem.m */; };
+		638F068B581BD20C38C6DD70 /* MZGameOverComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = 638F09723115E2454E319ADE /* MZGameOverComponent.m */; };
 		638F076E8E3D9FEE6ECFDC14 /* MZMazeTileEmitter.m in Sources */ = {isa = PBXBuildFile; fileRef = 638F03794D507F3C157438B5 /* MZMazeTileEmitter.m */; };
 		638F07AA8536019FC1D59912 /* MZMazeMetricsComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = 638F01C5C0FB51046C56BDC0 /* MZMazeMetricsComponent.m */; };
+		638F08C2335B577023A41091 /* MZGameOverPopupSystem.m in Sources */ = {isa = PBXBuildFile; fileRef = 638F031C7217082A6ACF4B7D /* MZGameOverPopupSystem.m */; };
 		638F08EC646531C7F85CEB6C /* MZMovingSystem.m in Sources */ = {isa = PBXBuildFile; fileRef = 638F0AE0B9612F26B010B639 /* MZMovingSystem.m */; };
 		638F093CAD781E2F9D169CCC /* MZStopSystem.m in Sources */ = {isa = PBXBuildFile; fileRef = 638F071AA943EA8F8A5FB4FF /* MZStopSystem.m */; };
 		638F0B7A7F4D6556814804E0 /* MZNotWalkableComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = 638F0C76B0DBC5B65CDCCE45 /* MZNotWalkableComponent.m */; };
@@ -146,6 +149,7 @@
 		638F026DDFE9E19070E418EF /* MZBigDotComponent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MZBigDotComponent.m; sourceTree = "<group>"; };
 		638F02EDA9DDD718FCDF98BA /* MZTickComponent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MZTickComponent.m; sourceTree = "<group>"; };
 		638F0300F3528684F4F3E377 /* MZDotComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MZDotComponent.h; sourceTree = "<group>"; };
+		638F031C7217082A6ACF4B7D /* MZGameOverPopupSystem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MZGameOverPopupSystem.m; sourceTree = "<group>"; };
 		638F0331042C33F4E2DE20D2 /* ESEntityRepository+Singleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ESEntityRepository+Singleton.h"; sourceTree = "<group>"; };
 		638F03794D507F3C157438B5 /* MZMazeTileEmitter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MZMazeTileEmitter.m; sourceTree = "<group>"; };
 		638F038497688C01083B11E3 /* MZDirection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MZDirection.h; sourceTree = "<group>"; };
@@ -158,17 +162,20 @@
 		638F052E2E5657BD51CA3E7D /* MZComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MZComponent.h; sourceTree = "<group>"; };
 		638F05738D95FB19DA585A7F /* MZBigDotComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MZBigDotComponent.h; sourceTree = "<group>"; };
 		638F059CA24D1ACD98668E5B /* MZDotComponent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MZDotComponent.m; sourceTree = "<group>"; };
+		638F05CB89AC6CDB95DA991C /* MZPacManEatPacManSystem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MZPacManEatPacManSystem.h; sourceTree = "<group>"; };
 		638F0666271BD9186745342F /* MZMovingComponent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MZMovingComponent.m; sourceTree = "<group>"; };
 		638F068163CBD507AF02538C /* MZMazeTileEmitter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MZMazeTileEmitter.h; sourceTree = "<group>"; };
 		638F06EDABF284B3A730FC52 /* MZMazeMetricsComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MZMazeMetricsComponent.h; sourceTree = "<group>"; };
 		638F06FED6FC935092813CD4 /* MZMazeTileComponent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MZMazeTileComponent.m; sourceTree = "<group>"; };
 		638F071AA943EA8F8A5FB4FF /* MZStopSystem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MZStopSystem.m; sourceTree = "<group>"; };
+		638F07C59E88CD2DCF4961E7 /* MZPacManEatPacManSystem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MZPacManEatPacManSystem.m; sourceTree = "<group>"; };
 		638F07EF4E7811B90E67FFD7 /* MZGameScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MZGameScene.m; sourceTree = "<group>"; };
 		638F08087087579AF04AF942 /* MZSpriteKitNodeComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MZSpriteKitNodeComponent.h; sourceTree = "<group>"; };
 		638F08952A64E3F535E99A30 /* MZCollectDotsSystem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MZCollectDotsSystem.m; sourceTree = "<group>"; };
 		638F08A0D3F15D5F616B265D /* maze.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = maze.txt; sourceTree = "<group>"; };
 		638F093214D2969F06B633EE /* MZCheckWinSystem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MZCheckWinSystem.h; sourceTree = "<group>"; };
 		638F096D75973054D0FD8ECF /* MZGateComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MZGateComponent.h; sourceTree = "<group>"; };
+		638F09723115E2454E319ADE /* MZGameOverComponent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MZGameOverComponent.m; sourceTree = "<group>"; };
 		638F09A5BD129C3A337CD46A /* MZTimeConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MZTimeConstants.h; sourceTree = "<group>"; };
 		638F09B03261A1946F758E5E /* MZGateComponent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MZGateComponent.m; sourceTree = "<group>"; };
 		638F09D285B22FC28B68D71D /* MZMovingComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MZMovingComponent.h; sourceTree = "<group>"; };
@@ -179,10 +186,12 @@
 		638F0B403E3DDCB401ECFDCA /* MZPacManComponent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MZPacManComponent.m; sourceTree = "<group>"; };
 		638F0B595FF6A7F913BD7D05 /* MZMazeConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MZMazeConstants.h; sourceTree = "<group>"; };
 		638F0B5AD3AE603AAEEEF9F8 /* MZSpriteKitNodeComponent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MZSpriteKitNodeComponent.m; sourceTree = "<group>"; };
+		638F0B8CD09812B0A952A25F /* MZGameOverComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MZGameOverComponent.h; sourceTree = "<group>"; };
 		638F0BAA9203EF67DE488514 /* MZMazeTileComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MZMazeTileComponent.h; sourceTree = "<group>"; };
 		638F0BBE4A75D6A51B047C54 /* MZGameScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MZGameScene.h; sourceTree = "<group>"; };
 		638F0C76B0DBC5B65CDCCE45 /* MZNotWalkableComponent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MZNotWalkableComponent.m; sourceTree = "<group>"; };
 		638F0CBE491DE664EBE1A040 /* MZPacManComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MZPacManComponent.h; sourceTree = "<group>"; };
+		638F0D1B6E1239F7664578D4 /* MZGameOverPopupSystem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MZGameOverPopupSystem.h; sourceTree = "<group>"; };
 		638F0D56DB5D245A828455BB /* ESEntityRepository+Singleton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ESEntityRepository+Singleton.m"; sourceTree = "<group>"; };
 		638F0D63D00E2C34240EBFF3 /* MZMovingAnimationSystem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MZMovingAnimationSystem.m; sourceTree = "<group>"; };
 		638F0D9ED7D577F4B8B07C69 /* MZNotWalkableComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MZNotWalkableComponent.h; sourceTree = "<group>"; };
@@ -271,7 +280,7 @@
 				638F0004BA3C695CED48D501 /* Character */,
 				638F03A0DF72E697DEBE1FE7 /* Time */,
 				638F08514463DA93325FB8C6 /* Moving */,
-				638F095C9FE5048CC04512A5 /* Rewards */,
+				638F095C9FE5048CC04512A5 /* Eat */,
 			);
 			path = EPacMan;
 			sourceTree = "<group>";
@@ -420,7 +429,7 @@
 			path = Scene;
 			sourceTree = "<group>";
 		};
-		638F095C9FE5048CC04512A5 /* Rewards */ = {
+		638F095C9FE5048CC04512A5 /* Eat */ = {
 			isa = PBXGroup;
 			children = (
 				638F08952A64E3F535E99A30 /* MZCollectDotsSystem.m */,
@@ -429,8 +438,14 @@
 				638F048FE09C39B5901C29D5 /* MZUpdateTileViewOnDotRemovalSystem.h */,
 				638F0F96E9FD02F2BF55971D /* MZCheckWinSystem.m */,
 				638F093214D2969F06B633EE /* MZCheckWinSystem.h */,
+				638F07C59E88CD2DCF4961E7 /* MZPacManEatPacManSystem.m */,
+				638F05CB89AC6CDB95DA991C /* MZPacManEatPacManSystem.h */,
+				638F09723115E2454E319ADE /* MZGameOverComponent.m */,
+				638F0B8CD09812B0A952A25F /* MZGameOverComponent.h */,
+				638F031C7217082A6ACF4B7D /* MZGameOverPopupSystem.m */,
+				638F0D1B6E1239F7664578D4 /* MZGameOverPopupSystem.h */,
 			);
-			path = Rewards;
+			path = Eat;
 			sourceTree = "<group>";
 		};
 		638F0BC96C09D9BA6C61702B /* EntitasExtension */ = {
@@ -632,6 +647,9 @@
 				638F04B9369B0F357B8AD19D /* MZCollectDotsSystem.m in Sources */,
 				638F0684A8DB58EB15BABA2E /* MZUpdateTileViewOnDotRemovalSystem.m in Sources */,
 				638F0BB5E7DA1CAA3270399F /* MZCheckWinSystem.m in Sources */,
+				638F05745B18B09F265C73E2 /* MZPacManEatPacManSystem.m in Sources */,
+				638F068B581BD20C38C6DD70 /* MZGameOverComponent.m in Sources */,
+				638F08C2335B577023A41091 /* MZGameOverPopupSystem.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

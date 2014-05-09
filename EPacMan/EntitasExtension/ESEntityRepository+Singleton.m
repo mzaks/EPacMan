@@ -19,8 +19,8 @@
 - (ESEntity *)singletonEntity:(ESMatcher *)matcher {
     ESCollection *collection = [self collectionForMatcher:matcher];
 
-    NSInteger count = collection.entities.count;
-    NSAssert(count <= 1, @"Should have maximum 1 instance of the singleton entity with component %@, instead: %d", matcher, count);
+    NSUInteger count = collection.entities.count;
+    NSAssert(count <= 1, @"Should have maximum 1 instance of the singleton entity with component %@, instead: %ul", matcher, count);
 
     return [collection.entities firstObject];
 }
