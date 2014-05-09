@@ -23,6 +23,8 @@
 #import "MZCollectDotsSystem.h"
 #import "MZUpdateTileViewOnDotRemovalSystem.h"
 #import "MZCheckWinSystem.h"
+#import "MZTimeDisplayingSystem.h"
+#import "MZGameViewController.h"
 
 @implementation MZGameScene {
     ESEntityRepository *_repo;
@@ -43,9 +45,10 @@
 
 - (void)reset {
     [_rootSystem removeAllSystems];
+    [self removeAllChildren];
     for (ESEntity *entity in [_repo allEntities]) {
-        if([entity hasComponentOfType:[MZSpriteKitNodeComponent class]]){
-            [getComponent(entity, MZSpriteKitNodeComponent).node removeFromParent];
+        if([entity hasComponentOfType:[MZGameViewControllerComponent class]]){
+            continue;
         }
         [_repo destroyEntity:entity];
     }
@@ -76,6 +79,7 @@
     [_rootSystem addSystem:[MZCollectDotsSystem new]];
     [_rootSystem addSystem:[MZUpdateTileViewOnDotRemovalSystem new]];
     [_rootSystem addSystem:[MZCheckWinSystem new]];
+    [_rootSystem addSystem:[MZTimeDisplayingSystem new]];
 }
 
 -(void)update:(CFTimeInterval)currentTime {

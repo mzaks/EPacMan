@@ -8,7 +8,7 @@
 #import "MZTileMap.h"
 #import "MZNotWalkableComponent.h"
 #import "MZWishDirectionComponent.h"
-#import "MZSimulationConstants.h"
+#import "MZTimeConstants.h"
 #import "MZTickComponent.h"
 
 @implementation MZMovingSystem {

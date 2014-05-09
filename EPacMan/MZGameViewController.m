@@ -15,6 +15,23 @@
 #import "MZMovingComponent.h"
 #import "MZWishDirectionComponent.h"
 
+@implementation MZGameViewControllerComponent
+- (instancetype)initWithViewController:(MZGameViewController *)viewController {
+    self = [super init];
+    if (self) {
+        _viewController = viewController;
+    }
+
+    return self;
+}
+
++ (instancetype)componentWithViewController:(MZGameViewController *)viewController {
+    return [[self alloc] initWithViewController:viewController];
+}
+
+
+@end
+
 @implementation MZGameViewController {
     ESEntityRepository *_repository;
 }
@@ -28,6 +45,7 @@
     
     [_gameView presentScene:scene];
     _repository = [ESEntityRepository sharedRepository];
+    [[_repository createEntity] addComponent:[MZGameViewControllerComponent componentWithViewController:self]];
 }
 
 - (BOOL)shouldAutorotate
@@ -40,23 +58,36 @@
     return UIInterfaceOrientationMaskLandscape;
 }
 
+- (BOOL)prefersStatusBarHidden
+{
+    return YES;
+}
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
 }
-- (IBAction)up:(id)sender {
+
+- (IBAction)up:(id)sender
+{
     ESEntity *pacManEntity = [_repository singletonEntity:[MZPacManComponent matcher]];
     [pacManEntity exchangeComponent:[MZWishDirectionComponent componentWithDirection:UP]];
 }
-- (IBAction)down:(id)sender {
+
+- (IBAction)down:(id)sender
+{
     ESEntity *pacManEntity = [_repository singletonEntity:[MZPacManComponent matcher]];
     [pacManEntity exchangeComponent:[MZWishDirectionComponent componentWithDirection:DOWN]];
 }
-- (IBAction)right:(id)sender {
+
+- (IBAction)right:(id)sender
+{
     ESEntity *pacManEntity = [_repository singletonEntity:[MZPacManComponent matcher]];
     [pacManEntity exchangeComponent:[MZWishDirectionComponent componentWithDirection:RIGHT]];
 }
-- (IBAction)left:(id)sender {
+
+- (IBAction)left:(id)sender
+{
     ESEntity *pacManEntity = [_repository singletonEntity:[MZPacManComponent matcher]];
     [pacManEntity exchangeComponent:[MZWishDirectionComponent componentWithDirection:LEFT]];
 }

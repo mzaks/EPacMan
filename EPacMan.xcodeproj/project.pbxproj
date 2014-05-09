@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0B1CB590191CF5C800CE84E6 /* MZTimeDisplayingSystem.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B1CB58F191CF5C800CE84E6 /* MZTimeDisplayingSystem.m */; };
 		0B4A664C190C1B1900C0498C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B4A664B190C1B1900C0498C /* Foundation.framework */; };
 		0B4A664E190C1B1900C0498C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B4A664D190C1B1900C0498C /* CoreGraphics.framework */; };
 		0B4A6650190C1B1900C0498C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B4A664F190C1B1900C0498C /* UIKit.framework */; };
@@ -87,6 +88,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0B1CB58E191CF5C800CE84E6 /* MZTimeDisplayingSystem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MZTimeDisplayingSystem.h; sourceTree = "<group>"; };
+		0B1CB58F191CF5C800CE84E6 /* MZTimeDisplayingSystem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MZTimeDisplayingSystem.m; sourceTree = "<group>"; };
 		0B4A6648190C1B1900C0498C /* EPacMan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EPacMan.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0B4A664B190C1B1900C0498C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		0B4A664D190C1B1900C0498C /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -166,7 +169,7 @@
 		638F08A0D3F15D5F616B265D /* maze.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = maze.txt; sourceTree = "<group>"; };
 		638F093214D2969F06B633EE /* MZCheckWinSystem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MZCheckWinSystem.h; sourceTree = "<group>"; };
 		638F096D75973054D0FD8ECF /* MZGateComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MZGateComponent.h; sourceTree = "<group>"; };
-		638F09A5BD129C3A337CD46A /* MZSimulationConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MZSimulationConstants.h; sourceTree = "<group>"; };
+		638F09A5BD129C3A337CD46A /* MZTimeConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MZTimeConstants.h; sourceTree = "<group>"; };
 		638F09B03261A1946F758E5E /* MZGateComponent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MZGateComponent.m; sourceTree = "<group>"; };
 		638F09D285B22FC28B68D71D /* MZMovingComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MZMovingComponent.h; sourceTree = "<group>"; };
 		638F0A0D3879CBE7DDCB3E92 /* MZDisplayMazeTilesSystem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MZDisplayMazeTilesSystem.h; sourceTree = "<group>"; };
@@ -266,7 +269,7 @@
 				638F0226761E4D7B94376F66 /* Maze */,
 				638F087E7210418D97CFBD0F /* Scene */,
 				638F0004BA3C695CED48D501 /* Character */,
-				638F03A0DF72E697DEBE1FE7 /* Simulation */,
+				638F03A0DF72E697DEBE1FE7 /* Time */,
 				638F08514463DA93325FB8C6 /* Moving */,
 				638F095C9FE5048CC04512A5 /* Rewards */,
 			);
@@ -374,14 +377,16 @@
 			path = Maze;
 			sourceTree = "<group>";
 		};
-		638F03A0DF72E697DEBE1FE7 /* Simulation */ = {
+		638F03A0DF72E697DEBE1FE7 /* Time */ = {
 			isa = PBXGroup;
 			children = (
 				638F02EDA9DDD718FCDF98BA /* MZTickComponent.m */,
 				638F0FABE6CE60A68579D292 /* MZTickComponent.h */,
-				638F09A5BD129C3A337CD46A /* MZSimulationConstants.h */,
+				638F09A5BD129C3A337CD46A /* MZTimeConstants.h */,
+				0B1CB58E191CF5C800CE84E6 /* MZTimeDisplayingSystem.h */,
+				0B1CB58F191CF5C800CE84E6 /* MZTimeDisplayingSystem.m */,
 			);
-			path = Simulation;
+			path = Time;
 			sourceTree = "<group>";
 		};
 		638F08514463DA93325FB8C6 /* Moving */ = {
@@ -600,6 +605,7 @@
 				0B4A665A190C1B1900C0498C /* main.m in Sources */,
 				0B4A665E190C1B1900C0498C /* MZAppDelegate.m in Sources */,
 				638F03C9D77CBA290FA6CB99 /* ESEntityRepository+Singleton.m in Sources */,
+				0B1CB590191CF5C800CE84E6 /* MZTimeDisplayingSystem.m in Sources */,
 				638F076E8E3D9FEE6ECFDC14 /* MZMazeTileEmitter.m in Sources */,
 				638F0D0005FD35194C4FBE91 /* MZPositionComponent.m in Sources */,
 				638F0B7A7F4D6556814804E0 /* MZNotWalkableComponent.m in Sources */,

@@ -7,6 +7,7 @@
 #import "MZGameSceneComponent.h"
 #import "MZSpriteKitNodeComponent.h"
 #import "MZGameScene.h"
+#import "MZGameViewController.h"
 
 
 @implementation MZCheckWinSystem {
@@ -32,8 +33,8 @@
     
     if ([_repository entitiesForMatcher:[ESMatcher anyOf:[MZDotComponent class], [MZBigDotComponent class], nil]].count == 0){
         ESEntity *tickEntity = [_repository singletonEntity:[MZTickComponent matcher]];
-        NSUInteger tick = getComponent(tickEntity, MZTickComponent ).currentTick;
-        NSString *message = [NSString stringWithFormat:@"You finished in %lu ticks", (unsigned long)tick];
+        NSString *time = singletonComponent(_repository, MZGameViewControllerComponent).viewController.timeLabel.text;
+        NSString *message = [NSString stringWithFormat:@"You finished in %@", time];
         UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Yeah!!!" message:message delegate:self cancelButtonTitle:@"Replay!" otherButtonTitles:nil];
         [alertView show];
     }

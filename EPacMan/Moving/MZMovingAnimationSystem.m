@@ -4,7 +4,7 @@
 #import "MZMovingComponent.h"
 #import "ESEntityRepository+Singleton.h"
 #import "MZSpriteKitNodeComponent.h"
-#import "MZSimulationConstants.h"
+#import "MZTimeConstants.h"
 #import "MZTileMap.h"
 
 
