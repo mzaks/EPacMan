@@ -8,6 +8,7 @@
 #import "MZSpriteKitNodeComponent.h"
 #import "MZGameScene.h"
 #import "MZGameSceneComponent.h"
+#import "MZMazeLevelComponent.h"
 
 
 @implementation MZGameOverPopupSystem {
@@ -40,12 +41,20 @@
         }
 
 
-        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:title message:message delegate:self cancelButtonTitle:@"Replay!" otherButtonTitles:nil];
+        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:title message:message delegate:self cancelButtonTitle:@"Replay!" otherButtonTitles:@"Next Level", nil];
         [alertView show];
     }
 }
 
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
+    if(buttonIndex == 1){
+        ESEntity *levelEntity = [_repository singletonEntity:[MZMazeLevelComponent matcher]];
+        NSUInteger level = getComponent(levelEntity, MZMazeLevelComponent).level;
+        if(level<6){
+            NSUInteger nextLevel = level + 1;
+            [levelEntity exchangeComponent:[MZMazeLevelComponent componentWithLevel:nextLevel]];
+        }
+    }
     ESEntity *sceneEntity = [_repository singletonEntity:[MZGameSceneComponent matcher]];
     MZGameScene *scene = (MZGameScene *) getComponent(sceneEntity , MZSpriteKitNodeComponent).node;
     [scene reset];

@@ -26,5 +26,11 @@
 @interface MZGameViewController : UIViewController
 @property (weak, nonatomic) IBOutlet SKView *gameView;
 @property (weak, nonatomic) IBOutlet UILabel *timeLabel;
+@property (strong, nonatomic) IBOutletCollection(UIButton) NSArray *buttonsUp;
+@property (strong, nonatomic) IBOutletCollection(UIButton) NSArray *buttonsDown;
+@property (strong, nonatomic) IBOutlet UIButton *buttonLeft;
+@property (strong, nonatomic) IBOutlet UIButton *buttonRight;
+
+- (void)resetButtons;
 
 @end

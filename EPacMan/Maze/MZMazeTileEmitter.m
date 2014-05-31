@@ -10,13 +10,19 @@
 #import "MZGateComponent.h"
 #import "MZMazeTileComponent.h"
 #import "MZStopedComponent.h"
+#import "MZMazeLevelComponent.h"
+#import "MZMazeMetricsComponent.h"
 
 
 @implementation MZMazeTileEmitter {
 
 }
 + (void)readMazeDefinitionAndCreateMazeTileEntities {
-    NSString* path = [[NSBundle mainBundle] pathForResource:@"maze"
+    ESEntity *levelEntity = [[ESEntityRepository sharedRepository] singletonEntity:[MZMazeLevelComponent matcher]];
+    MZMazeLevelComponent *mazeLevelComponent = getComponent(levelEntity, MZMazeLevelComponent);
+    NSString *name = [NSString stringWithFormat:@"maze%i", mazeLevelComponent.level];
+    NSLog(@"Maze : %@", name);
+    NSString* path = [[NSBundle mainBundle] pathForResource:name
                                                      ofType:@"txt"];
     NSString* content = [NSString stringWithContentsOfFile:path
                                                   encoding:NSUTF8StringEncoding
@@ -25,6 +31,8 @@
             [NSCharacterSet newlineCharacterSet]];
 
     ESEntityRepository *repo = [ESEntityRepository sharedRepository];
+
+    [[[ESEntityRepository sharedRepository] createEntity] addComponent:[MZMazeMetricsComponent componentWithWidthInTiles:((NSString *)lines[0]).length heightInTiles:lines.count]];
 
     for (NSUInteger y = 0; y < lines.count; y++) {
         NSString *line = lines[y];

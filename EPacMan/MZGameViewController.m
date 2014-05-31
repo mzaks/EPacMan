@@ -14,6 +14,9 @@
 #import "ESEntity.h"
 #import "MZMovingComponent.h"
 #import "MZWishDirectionComponent.h"
+#import "MZMazeMetricsComponent.h"
+
+#import <GameController/GameController.h>
 
 @implementation MZGameViewControllerComponent
 - (instancetype)initWithViewController:(MZGameViewController *)viewController {
@@ -34,6 +37,9 @@
 
 @implementation MZGameViewController {
     ESEntityRepository *_repository;
+    NSMutableDictionary *_buttonImage;
+    NSMutableDictionary *_buttonPressedImage;
+    GCController *_gameController;
 }
 
 - (void)viewDidLoad
@@ -46,6 +52,84 @@
     [_gameView presentScene:scene];
     _repository = [ESEntityRepository sharedRepository];
     [[_repository createEntity] addComponent:[MZGameViewControllerComponent componentWithViewController:self]];
+    _buttonImage = [NSMutableDictionary new];
+    _buttonPressedImage = [NSMutableDictionary new];
+    _buttonImage[@(UP)] = ((UIButton *)_buttonsUp.firstObject).imageView.image;
+    _buttonImage[@(DOWN)] = ((UIButton *)_buttonsDown.firstObject).imageView.image;
+    _buttonImage[@(LEFT)] = _buttonLeft.imageView.image;
+    _buttonImage[@(RIGHT)] = _buttonRight.imageView.image;
+
+    [self createPressedImageInDirection:UP];
+    [self createPressedImageInDirection:DOWN];
+    [self createPressedImageInDirection:LEFT];
+    [self createPressedImageInDirection:RIGHT];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(connectGameController) name:GCControllerDidConnectNotification object:nil];
+    
+}
+
+- (void)connectGameController{
+    _gameController = [[GCController controllers] firstObject];
+    if(_gameController){
+        _gameController.playerIndex = 0;
+        _gameController.gamepad.dpad.valueChangedHandler = ^(GCControllerDirectionPad *dpad, float xValue, float yValue) {
+            if (xValue == 0.0 && yValue == 0) {
+                return;
+            }
+            if (fabsf(xValue)>fabsf(yValue)) {
+                if (xValue>0) {
+                    [self right:nil];
+                }else{
+                    [self left:nil];
+                }
+            } else {
+                if (yValue>0) {
+                    [self up:nil];
+                } else {
+                    [self down:nil];
+                }
+            }
+            /*
+            if (dpad.up.pressed) {
+                [self up:nil];
+                return;
+            }
+            if (dpad.down.pressed) {
+                [self down:nil];
+                return;
+            }
+            if (dpad.left.pressed) {
+                [self left:nil];
+                return;
+            }
+            if (dpad.right.pressed) {
+                
+                return;
+            }
+             */
+        };
+    }
+
+}
+
+- (void)createPressedImageInDirection:(enum MZDirection)direction {
+    _buttonPressedImage[@(direction)] = [self imageBlackAndWhite:((UIImage *) _buttonImage[@(direction)])];
+}
+
+- (UIImage *)imageBlackAndWhite:(UIImage *)img
+{
+    CIImage *beginImage = [CIImage imageWithCGImage:img.CGImage];
+
+    CIImage *blackAndWhite = [CIFilter filterWithName:@"CIColorControls" keysAndValues:kCIInputImageKey, beginImage, @"inputBrightness", [NSNumber numberWithFloat:0.0], @"inputContrast", [NSNumber numberWithFloat:1.1], @"inputSaturation", [NSNumber numberWithFloat:0.0], nil].outputImage;
+    CIImage *output = [CIFilter filterWithName:@"CIExposureAdjust" keysAndValues:kCIInputImageKey, blackAndWhite, @"inputEV", [NSNumber numberWithFloat:0.7], nil].outputImage;
+
+    CIContext *context = [CIContext contextWithOptions:nil];
+    CGImageRef cgiimage = [context createCGImage:output fromRect:output.extent];
+    UIImage *newImage = [UIImage imageWithCGImage:cgiimage];
+
+    CGImageRelease(cgiimage);
+
+    return newImage;
 }
 
 - (BOOL)shouldAutorotate
@@ -70,7 +154,10 @@
 
 - (IBAction)up:(id)sender
 {
-//    ESEntity *pacManEntity = [_repository singletonEntity:[MZPacManComponent matcher]];
+    [self resetButtons];
+    for (UIButton *button in _buttonsUp){
+        [button setImage:_buttonPressedImage[@(UP)] forState:UIControlStateNormal];
+    }
     for(ESEntity *pacManEntity in [_repository entitiesForMatcher:[MZPacManComponent matcher]]){
         [pacManEntity exchangeComponent:[MZWishDirectionComponent componentWithDirection:UP]];
     }
@@ -78,7 +165,10 @@
 
 - (IBAction)down:(id)sender
 {
-//    ESEntity *pacManEntity = [_repository singletonEntity:[MZPacManComponent matcher]];
+    [self resetButtons];
+    for (UIButton *button in _buttonsDown){
+        [button setImage:_buttonPressedImage[@(DOWN)] forState:UIControlStateNormal];
+    }
     for(ESEntity *pacManEntity in [_repository entitiesForMatcher:[MZPacManComponent matcher]]){
         [pacManEntity exchangeComponent:[MZWishDirectionComponent componentWithDirection:DOWN]];
     }
@@ -86,7 +176,8 @@
 
 - (IBAction)right:(id)sender
 {
-//    ESEntity *pacManEntity = [_repository singletonEntity:[MZPacManComponent matcher]];
+    [self resetButtons];
+    [_buttonRight setImage:_buttonPressedImage[@(RIGHT)] forState:UIControlStateNormal];
     for(ESEntity *pacManEntity in [_repository entitiesForMatcher:[MZPacManComponent matcher]]){
         [pacManEntity exchangeComponent:[MZWishDirectionComponent componentWithDirection:RIGHT]];
     }
@@ -95,9 +186,21 @@
 
 - (IBAction)left:(id)sender
 {
-//    ESEntity *pacManEntity = [_repository singletonEntity:[MZPacManComponent matcher]];
+    [self resetButtons];
+    [_buttonLeft setImage:_buttonPressedImage[@(LEFT)] forState:UIControlStateNormal];
     for(ESEntity *pacManEntity in [_repository entitiesForMatcher:[MZPacManComponent matcher]]){
         [pacManEntity exchangeComponent:[MZWishDirectionComponent componentWithDirection:LEFT]];
+    }
+}
+
+- (void)resetButtons {
+    [_buttonLeft setImage:_buttonImage[@(LEFT)] forState:UIControlStateNormal];
+    [_buttonRight setImage:_buttonImage[@(RIGHT)] forState:UIControlStateNormal];
+    for (UIButton *button in _buttonsUp){
+        [button setImage:_buttonImage[@(UP)] forState:UIControlStateNormal];
+    }
+    for (UIButton *button in _buttonsDown){
+        [button setImage:_buttonImage[@(DOWN)] forState:UIControlStateNormal];
     }
 }
 

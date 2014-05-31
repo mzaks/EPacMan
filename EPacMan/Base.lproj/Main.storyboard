@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13C1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="LVB-YS-i5n">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13D65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="LVB-YS-i5n">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
@@ -21,8 +21,8 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="270" id="OS4-Rz-7iU"/>
-                                    <constraint firstAttribute="width" constant="210" id="W0J-Lo-Vg8"/>
+                                    <constraint firstAttribute="height" constant="270" id="Dmh-x8-Xlj"/>
+                                    <constraint firstAttribute="width" constant="210" id="cdo-pv-Wj3"/>
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YQI-Ot-RIG" userLabel="up2">
@@ -124,16 +124,16 @@
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="MxQ-bQ-hD9" firstAttribute="top" secondItem="wsT-mG-Cww" secondAttribute="bottom" constant="20" id="0xo-Ww-VQ4"/>
+                            <constraint firstAttribute="centerY" secondItem="1Hi-sd-XRc" secondAttribute="centerY" id="3cp-rQ-Ajm"/>
                             <constraint firstAttribute="trailing" secondItem="YQI-Ot-RIG" secondAttribute="trailing" id="Bhf-yk-0Tu"/>
                             <constraint firstAttribute="trailing" secondItem="jgF-Gg-Nx9" secondAttribute="trailing" id="BzZ-ah-aMf"/>
                             <constraint firstAttribute="centerX" secondItem="QzH-a1-T5D" secondAttribute="centerX" id="HjD-qM-5TH"/>
                             <constraint firstItem="aVg-JY-jeM" firstAttribute="top" secondItem="QzH-a1-T5D" secondAttribute="bottom" id="IjW-vm-dZO"/>
                             <constraint firstItem="QzH-a1-T5D" firstAttribute="top" secondItem="TvN-0d-DFh" secondAttribute="bottom" constant="299" id="JpE-oW-ArD"/>
+                            <constraint firstAttribute="centerX" secondItem="1Hi-sd-XRc" secondAttribute="centerX" id="L2y-kb-EJl"/>
                             <constraint firstItem="sZ9-eD-8r7" firstAttribute="top" secondItem="TvN-0d-DFh" secondAttribute="bottom" constant="20" id="P98-2B-etj"/>
                             <constraint firstItem="wsT-mG-Cww" firstAttribute="top" secondItem="sZ9-eD-8r7" secondAttribute="bottom" constant="20" id="QmF-qt-iqV"/>
-                            <constraint firstAttribute="centerY" secondItem="1Hi-sd-XRc" secondAttribute="centerY" id="Yto-RC-ObK"/>
                             <constraint firstItem="wsT-mG-Cww" firstAttribute="leading" secondItem="bdc-N1-crn" secondAttribute="leading" id="a1K-cN-hmb"/>
-                            <constraint firstAttribute="centerX" secondItem="1Hi-sd-XRc" secondAttribute="centerX" id="avN-XC-KNh"/>
                             <constraint firstItem="jgF-Gg-Nx9" firstAttribute="top" secondItem="M8o-zT-biv" secondAttribute="bottom" constant="20" id="c5O-iu-RB3"/>
                             <constraint firstItem="MxQ-bQ-hD9" firstAttribute="leading" secondItem="bdc-N1-crn" secondAttribute="leading" id="k3q-wG-9eK"/>
                             <constraint firstItem="M8o-zT-biv" firstAttribute="top" secondItem="YQI-Ot-RIG" secondAttribute="bottom" constant="20" id="kSd-ka-yGY"/>
@@ -146,8 +146,14 @@
                     <nil key="simulatedStatusBarMetrics"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <connections>
+                        <outlet property="buttonLeft" destination="wsT-mG-Cww" id="aAG-0t-Vx8"/>
+                        <outlet property="buttonRight" destination="M8o-zT-biv" id="Dj3-G9-etV"/>
                         <outlet property="gameView" destination="1Hi-sd-XRc" id="PeD-4z-vfg"/>
                         <outlet property="timeLabel" destination="QzH-a1-T5D" id="dhC-f9-TUR"/>
+                        <outletCollection property="buttonsDown" destination="jgF-Gg-Nx9" id="M6V-qv-Gvo"/>
+                        <outletCollection property="buttonsDown" destination="MxQ-bQ-hD9" id="aFB-sT-Rfr"/>
+                        <outletCollection property="buttonsUp" destination="YQI-Ot-RIG" id="arb-Si-9UO"/>
+                        <outletCollection property="buttonsUp" destination="sZ9-eD-8r7" id="foR-Uc-mgg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="btX-cZ-eVz" sceneMemberID="firstResponder"/>

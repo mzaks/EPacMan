@@ -28,6 +28,8 @@
 #import "MZPacManEatPacManSystem.h"
 #import "MZGameOverPopupSystem.h"
 #import "MZGameOverComponent.h"
+#import "MZMazeLevelComponent.h"
+#import "MZMazeMetricsComponent.h"
 
 @implementation MZGameScene {
     ESEntityRepository *_repo;
@@ -37,11 +39,8 @@
 -(id)initWithSize:(CGSize)size {    
     if (self = [super initWithSize:size]) {
         _repo = [ESEntityRepository sharedRepository];
-        [self createTickEntity];
-        [MZTileMap sharedMap];
-        [self createRootSystem];
-        [self createGameSceneEntity];
-        [MZMazeTileEmitter readMazeDefinitionAndCreateMazeTileEntities];
+        [self createMazeLevelEntity];
+        [self reset];
     }
     return self;
 }
@@ -51,6 +50,11 @@
     [self removeAllChildren];
     for (ESEntity *entity in [_repo allEntities]) {
         if([entity hasComponentOfType:[MZGameViewControllerComponent class]]){
+            MZGameViewControllerComponent *gameViewControllerComponent = getComponent(entity, MZGameViewControllerComponent);
+            [gameViewControllerComponent.viewController resetButtons];
+            continue;
+        }
+        if([entity hasComponentOfType:[MZMazeLevelComponent class]]){
             continue;
         }
         [_repo destroyEntity:entity];
@@ -60,10 +64,29 @@
     [self createRootSystem];
     [self createGameSceneEntity];
     [MZMazeTileEmitter readMazeDefinitionAndCreateMazeTileEntities];
+    [self adjustSize];
 }
+
+- (void)adjustSize {
+
+    ESEntity *mazeMetricsEntity = [_repo singletonEntity:[MZMazeMetricsComponent matcher]];
+    CGFloat width = getComponent(mazeMetricsEntity, MZMazeMetricsComponent).widthInTiles * 10;
+    CGFloat height = getComponent(mazeMetricsEntity, MZMazeMetricsComponent).heightInTiles * 10;
+//    self.size = CGSizeMake(width, height);
+//    CGFloat x = (CGFloat) ((_gameView.frame.size.width-width)/2.0);
+//    CGFloat y = (CGFloat) ((_gameView.frame.size.height-height)/2.0);
+//    self.position = CGPointMake(x, y);
+
+}
+
+
 
 - (void)createTickEntity {
     [[_repo createEntity] addComponent:[MZTickComponent componentWithCurrentTick:0]];
+}
+
+- (void)createMazeLevelEntity {
+    [[_repo createEntity] addComponent:[MZMazeLevelComponent componentWithLevel:1]];
 }
 
 - (void)createGameSceneEntity {

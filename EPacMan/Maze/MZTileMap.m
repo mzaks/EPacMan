@@ -11,6 +11,7 @@
 #import "ESEntityRepository+Internal.h"
 #import "MZMazeTileComponent.h"
 #import "MZPositionComponent.h"
+#import "MZMazeMetricsComponent.h"
 
 @implementation MZTileMap {
     ESEntityRepository *_repository;
@@ -46,7 +47,7 @@
 
 - (void)entity:(ESEntity *)changedEntity changedInCollection:(ESCollection *)collection withChangeType:(ESEntityChange)changeType {
     MZPositionComponent *positionComponent = getComponent(changedEntity, MZPositionComponent);
-    NSNumber *mapIndex = @(positionComponent.position.x + (positionComponent.position.y * 21));
+    NSNumber *mapIndex = @(positionComponent.position.x + (positionComponent.position.y * [self mazeWidth]));
     _map[mapIndex] = changedEntity;
 }
 
@@ -54,10 +55,10 @@
     if(position.x<0 || position.y<0){
         return nil;
     }
-    if(position.x>20){
+    if(position.x>[self mazeWidth]-1){
         return nil;
     }
-    NSNumber *mapIndex = @(position.x + (position.y * 21));
+    NSNumber *mapIndex = @(position.x + (position.y * [self mazeWidth]));
     return _map[mapIndex];
 }
 
@@ -85,38 +86,47 @@
 
     CGFloat x = positionComponent.position.x - 1;
     if(x<0){
-        x = 20;
+        x = [self mazeWidth]-1;
     }
-    NSNumber *mapIndex = @(x + (positionComponent.position.y * 21));
+    NSNumber *mapIndex = @(x + (positionComponent.position.y * [self mazeWidth]));
     return _map[mapIndex];
 }
 
 - (ESEntity *)tileEntityRightFromTileEntity:(MZPositionComponent *)positionComponent{
     CGFloat x = (positionComponent.position.x + 1);
-    if(x>=21){
+    if(x>=[self mazeWidth]){
         x = 0;
     }
-    NSNumber *mapIndex = @(x + (positionComponent.position.y * 21));
+    NSNumber *mapIndex = @(x + (positionComponent.position.y * [self mazeWidth]));
     return _map[mapIndex];
 }
 
 - (ESEntity *)tileEntityUpFromTileEntity:(MZPositionComponent *)positionComponent{
     CGFloat y = (positionComponent.position.y + 1);
-    if(y>=28){
+    if(y>=[self mazeHeight]+1){
         y = 0;
     }
 
-    NSNumber *mapIndex = @(positionComponent.position.x + (y * 21));
+    NSNumber *mapIndex = @(positionComponent.position.x + (y * [self mazeWidth]));
     return _map[mapIndex];
 }
 
 - (ESEntity *)tileEntityDownFromTileEntity:(MZPositionComponent *)positionComponent{
     CGFloat y = (positionComponent.position.y - 1);
     if(y<0){
-        y = 26;
+        y = [self mazeHeight]-1;
     }
-    NSNumber *mapIndex = @(positionComponent.position.x + (y * 21));
+    NSNumber *mapIndex = @(positionComponent.position.x + (y * [self mazeWidth]));
     return _map[mapIndex];
+}
+
+- (NSUInteger)mazeWidth {
+    ESEntity *metricEntity = [_repository singletonEntity:[MZMazeMetricsComponent matcher]];
+    return getComponent(metricEntity, MZMazeMetricsComponent).widthInTiles;
+}
+
+- (NSUInteger)mazeHeight {
+    return getComponent([_repository singletonEntity:[MZMazeMetricsComponent matcher]], MZMazeMetricsComponent).heightInTiles;
 }
 
 
