@@ -22,7 +22,7 @@
 + (void)readMazeDefinitionAndCreateMazeTileEntities {
     ESEntity *levelEntity = [[ESEntityRepository sharedRepository] singletonEntity:[MZMazeLevelComponent matcher]];
     MZMazeLevelComponent *mazeLevelComponent = getComponent(levelEntity, MZMazeLevelComponent);
-    NSString *name = [NSString stringWithFormat:@"maze%i", mazeLevelComponent.level];
+    NSString *name = [NSString stringWithFormat:@"maze%lu", (unsigned long)mazeLevelComponent.level];
     NSLog(@"Maze : %@", name);
     NSString* path = [[NSBundle mainBundle] pathForResource:name
                                                      ofType:@"txt"];

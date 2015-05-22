@@ -67,7 +67,7 @@
     NSString *up = [self isNotWalkable:CGPointMake(position.x, position.y+1)] ? @"1" : @"0";
     NSString *right = [self isNotWalkable:CGPointMake(position.x+1, position.y)] ? @"1" : @"0";
     NSString *down = [self isNotWalkable:CGPointMake(position.x, position.y-1)] ? @"1" : @"0";
-    NSString *left = [self isNotWalkable:CGPointMake(position.x-1, position.y)] ? @"1" : @"0";;
+    NSString *left = [self isNotWalkable:CGPointMake(position.x-1, position.y)] ? @"1" : @"0";
 
     return [NSString stringWithFormat:@"tile%@%@%@%@.png", left,down,right,up];
 }

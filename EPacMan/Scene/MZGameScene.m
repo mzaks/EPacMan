@@ -74,21 +74,7 @@
     [self createRootSystem];
     [self createGameSceneEntity];
     [MZMazeTileEmitter readMazeDefinitionAndCreateMazeTileEntities];
-    [self adjustSize];
 }
-
-- (void)adjustSize {
-
-    ESEntity *mazeMetricsEntity = [_repo singletonEntity:[MZMazeMetricsComponent matcher]];
-    CGFloat width = getComponent(mazeMetricsEntity, MZMazeMetricsComponent).widthInTiles * 10;
-    CGFloat height = getComponent(mazeMetricsEntity, MZMazeMetricsComponent).heightInTiles * 10;
-//    self.size = CGSizeMake(width, height);
-//    CGFloat x = (CGFloat) ((_gameView.frame.size.width-width)/2.0);
-//    CGFloat y = (CGFloat) ((_gameView.frame.size.height-height)/2.0);
-//    self.position = CGPointMake(x, y);
-
-}
-
 
 
 - (void)createTickEntity {

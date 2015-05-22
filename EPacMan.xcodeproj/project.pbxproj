@@ -394,6 +394,7 @@
 				638F0F29C103A194BC8872F7 /* maze4.txt */,
 				638F04E048A2DB3FDC8AE585 /* maze5.txt */,
 				638F08A0D3F15D5F616B265D /* maze6.txt */,
+				638F05A80A21E5520DB3EF08 /* maze7.txt */,
 				638F03794D507F3C157438B5 /* MZMazeTileEmitter.m */,
 				638F068163CBD507AF02538C /* MZMazeTileEmitter.h */,
 				638F0E3A58AC60666E5C9E84 /* MZPositionComponent.m */,
@@ -419,7 +420,6 @@
 				638F06EDABF284B3A730FC52 /* MZMazeMetricsComponent.h */,
 				638F00E84598DAB16319A9D9 /* MZMazeLevelComponent.m */,
 				638F0F69133B1053B8CED33F /* MZMazeLevelComponent.h */,
-				638F05A80A21E5520DB3EF08 /* maze7.txt */,
 			);
 			path = Maze;
 			sourceTree = "<group>";
