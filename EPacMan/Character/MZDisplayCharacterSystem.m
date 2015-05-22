@@ -7,6 +7,7 @@
 #import "MZSpriteKitNodeComponent.h"
 #import "MZGameSceneComponent.h"
 #import "MZMazeConstants.h"
+#import "MZHistorizedComponent.h"
 
 
 @implementation MZDisplayCharacterSystem {
@@ -36,7 +37,7 @@
 
     for (ESEntity *pacman in pacmans){
         MZPositionComponent *positionComponent = getComponent(pacman, MZPositionComponent);
-        UIColor *color = [SKColor redColor];
+        UIColor *color = [pacman hasComponentOfType:[MZHistorizedComponent class]] ? [SKColor blueColor] : [SKColor redColor];
         SKSpriteNode *node = [SKSpriteNode spriteNodeWithColor:color size:CGSizeMake(TILE_WIDTH, TILE_HEIGHT)];
         node.anchorPoint = CGPointMake(0, 1);
         node.position = CGPointMake(positionComponent.position.x * TILE_WIDTH, positionComponent.position.y * TILE_HEIGHT);

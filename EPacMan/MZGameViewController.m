@@ -14,7 +14,9 @@
 #import "ESEntity.h"
 #import "MZMovingComponent.h"
 #import "MZWishDirectionComponent.h"
-#import "MZMazeMetricsComponent.h"
+#import "MZMoveHistoryComponent.h"
+#import "MZTickComponent.h"
+#import "MZHistorizedComponent.h"
 
 #import <GameController/GameController.h>
 
@@ -89,24 +91,6 @@
                     [self down:nil];
                 }
             }
-            /*
-            if (dpad.up.pressed) {
-                [self up:nil];
-                return;
-            }
-            if (dpad.down.pressed) {
-                [self down:nil];
-                return;
-            }
-            if (dpad.left.pressed) {
-                [self left:nil];
-                return;
-            }
-            if (dpad.right.pressed) {
-                
-                return;
-            }
-             */
         };
     }
 
@@ -158,9 +142,9 @@
     for (UIButton *button in _buttonsUp){
         [button setImage:_buttonPressedImage[@(UP)] forState:UIControlStateNormal];
     }
-    for(ESEntity *pacManEntity in [_repository entitiesForMatcher:[MZPacManComponent matcher]]){
-        [pacManEntity exchangeComponent:[MZWishDirectionComponent componentWithDirection:UP]];
-    }
+    MZWishDirectionComponent *directionComponent = [MZWishDirectionComponent componentWithDirection:UP];
+    [self addWishDirectionComponent:directionComponent];
+    [self addMoveToHistory:directionComponent];
 }
 
 - (IBAction)down:(id)sender
@@ -169,28 +153,43 @@
     for (UIButton *button in _buttonsDown){
         [button setImage:_buttonPressedImage[@(DOWN)] forState:UIControlStateNormal];
     }
-    for(ESEntity *pacManEntity in [_repository entitiesForMatcher:[MZPacManComponent matcher]]){
-        [pacManEntity exchangeComponent:[MZWishDirectionComponent componentWithDirection:DOWN]];
-    }
+    MZWishDirectionComponent *directionComponent = [MZWishDirectionComponent componentWithDirection:DOWN];
+    [self addWishDirectionComponent:directionComponent];
+    [self addMoveToHistory:directionComponent];
 }
 
 - (IBAction)right:(id)sender
 {
     [self resetButtons];
     [_buttonRight setImage:_buttonPressedImage[@(RIGHT)] forState:UIControlStateNormal];
-    for(ESEntity *pacManEntity in [_repository entitiesForMatcher:[MZPacManComponent matcher]]){
-        [pacManEntity exchangeComponent:[MZWishDirectionComponent componentWithDirection:RIGHT]];
-    }
-
+    MZWishDirectionComponent *directionComponent = [MZWishDirectionComponent componentWithDirection:RIGHT];
+    [self addWishDirectionComponent:directionComponent];
+    [self addMoveToHistory:directionComponent];
 }
 
 - (IBAction)left:(id)sender
 {
     [self resetButtons];
     [_buttonLeft setImage:_buttonPressedImage[@(LEFT)] forState:UIControlStateNormal];
+    MZWishDirectionComponent *directionComponent = [MZWishDirectionComponent componentWithDirection:LEFT];
+    [self addWishDirectionComponent:directionComponent];
+    [self addMoveToHistory:directionComponent];
+}
+
+- (void)addWishDirectionComponent:(MZWishDirectionComponent *)directionComponent {
     for(ESEntity *pacManEntity in [_repository entitiesForMatcher:[MZPacManComponent matcher]]){
-        [pacManEntity exchangeComponent:[MZWishDirectionComponent componentWithDirection:LEFT]];
+        if([pacManEntity hasComponentOfType:[MZHistorizedComponent class]]){
+            continue;
+        }
+        [pacManEntity exchangeComponent:directionComponent];
     }
+}
+
+- (void)addMoveToHistory:(MZWishDirectionComponent *)directionComponent {
+    ESEntity *movesHistoryEntity = [_repository singletonEntity:[MZMoveHistoryComponent matcher]];
+    NSMutableDictionary *movesDict = getComponent(movesHistoryEntity, MZMoveHistoryComponent).moves.lastObject;
+    ESEntity *tickEntity = [_repository singletonEntity:[MZTickComponent matcher]];
+    movesDict[@(getComponent(tickEntity, MZTickComponent).currentTick)] = directionComponent;
 }
 
 - (void)resetButtons {

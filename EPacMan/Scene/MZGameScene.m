@@ -30,6 +30,8 @@
 #import "MZGameOverComponent.h"
 #import "MZMazeLevelComponent.h"
 #import "MZMazeMetricsComponent.h"
+#import "MZMoveHistoryComponent.h"
+#import "MZMoveHistorizedPacManSystem.h"
 
 @implementation MZGameScene {
     ESEntityRepository *_repo;
@@ -40,6 +42,7 @@
     if (self = [super initWithSize:size]) {
         _repo = [ESEntityRepository sharedRepository];
         [self createMazeLevelEntity];
+        [self createMoveHistoryEntity];
         [self reset];
     }
     return self;
@@ -55,6 +58,13 @@
             continue;
         }
         if([entity hasComponentOfType:[MZMazeLevelComponent class]]){
+            continue;
+        }
+
+        if([entity hasComponentOfType:[MZMoveHistoryComponent class]]){
+            NSMutableArray *moves = [NSMutableArray arrayWithArray:getComponent(entity, MZMoveHistoryComponent).moves];
+            [moves addObject:[NSMutableDictionary new]];
+            [entity exchangeComponent:[MZMoveHistoryComponent componentWithMoves:moves]];
             continue;
         }
         [_repo destroyEntity:entity];
@@ -89,6 +99,11 @@
     [[_repo createEntity] addComponent:[MZMazeLevelComponent componentWithLevel:1]];
 }
 
+- (void)createMoveHistoryEntity {
+    [[_repo createEntity] addComponent:[MZMoveHistoryComponent componentWithMoves:@[]]];
+}
+
+
 - (void)createGameSceneEntity {
     ESEntity *gameSceneEntity = [_repo createEntity];
     [gameSceneEntity addComponent:[MZGameSceneComponent new]];
@@ -99,6 +114,7 @@
     _rootSystem = [ESSystems new];
     [_rootSystem addSystem:[MZDisplayMazeTilesSystem new]];
     [_rootSystem addSystem:[MZDisplayCharacterSystem new]];
+    [_rootSystem addSystem:[MZMoveHistorizedPacManSystem new]];
     [_rootSystem addSystem:[MZMovingSystem new]];
     [_rootSystem addSystem:[MZMovingAnimationSystem new]];
     [_rootSystem addSystem:[MZStopSystem new]];

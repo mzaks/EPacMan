@@ -5,6 +5,8 @@
 #import "MZPositionComponent.h"
 #import "MZPacManComponent.h"
 #import "MZGameOverComponent.h"
+#import "MZMovingComponent.h"
+#import "MZMoveHistoryComponent.h"
 
 
 @implementation MZPacManEatPacManSystem {
@@ -30,16 +32,27 @@
 
     NSMutableDictionary *takenPositions = [NSMutableDictionary new];
 
-    for (ESEntity *pacMan in [_repository entitiesForMatcher:[MZPacManComponent matcher]]){
+    for (ESEntity *pacMan in [_repository entitiesForMatcher:[ESMatcher allOf:[MZMovingComponent class], [MZPacManComponent class], nil]]){
         CGPoint position = getComponent(pacMan, MZPositionComponent).position;
         NSString *key = [NSString stringWithFormat:@"%gx%g", position.x, position.y];
         if (!takenPositions[key]){
             takenPositions[key] = @YES;
         } else {
+            [self dismissHistorizationOfThisRound];
             [[_repository createEntity] addComponent:[MZGameOverComponent componentWithState:LOSE]];
             return;
         }
     }
+}
+
+- (void)dismissHistorizationOfThisRound {
+    ESEntity *historizedMovesEntity = [_repository singletonEntity:[MZMoveHistoryComponent matcher]];
+
+    NSMutableArray *moves = [NSMutableArray arrayWithArray:getComponent(historizedMovesEntity, MZMoveHistoryComponent).moves];
+
+    [moves removeLastObject];
+
+    [historizedMovesEntity exchangeComponent:[MZMoveHistoryComponent componentWithMoves:moves]];
 }
 
 @end

@@ -4,4 +4,5 @@
 @implementation MZStopedComponent {
 
 }
+
 @end

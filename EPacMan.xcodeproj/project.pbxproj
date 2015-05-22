@@ -53,14 +53,18 @@
 		638F016EB5296DCBC5ABDB1B /* MZDisplayMazeTilesSystem.m in Sources */ = {isa = PBXBuildFile; fileRef = 638F0B005E2BF07078E8BC3E /* MZDisplayMazeTilesSystem.m */; };
 		638F025CA37D50D301B85FDD /* MZGameScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 638F07EF4E7811B90E67FFD7 /* MZGameScene.m */; };
 		638F036E6DD29B5BD3320C52 /* MZMazeLevelComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = 638F00E84598DAB16319A9D9 /* MZMazeLevelComponent.m */; };
+		638F037D943A69F7FA613ED7 /* maze7.txt in Resources */ = {isa = PBXBuildFile; fileRef = 638F05A80A21E5520DB3EF08 /* maze7.txt */; };
 		638F0390DC17B8034B1DB747 /* MZGateComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = 638F09B03261A1946F758E5E /* MZGateComponent.m */; };
 		638F03C773A1EDAAA8D62544 /* MZComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = 638F02451BE840AC6BA2EA3C /* MZComponent.m */; };
 		638F03C9D77CBA290FA6CB99 /* ESEntityRepository+Singleton.m in Sources */ = {isa = PBXBuildFile; fileRef = 638F0D56DB5D245A828455BB /* ESEntityRepository+Singleton.m */; };
+		638F0498DEE970868D4E1CFC /* MZMoveHistorizedPacManSystem.m in Sources */ = {isa = PBXBuildFile; fileRef = 638F0D47FCE953862A7199C7 /* MZMoveHistorizedPacManSystem.m */; };
 		638F04B9369B0F357B8AD19D /* MZCollectDotsSystem.m in Sources */ = {isa = PBXBuildFile; fileRef = 638F08952A64E3F535E99A30 /* MZCollectDotsSystem.m */; };
 		638F0555069154237323648B /* MZMovingComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = 638F0666271BD9186745342F /* MZMovingComponent.m */; };
 		638F05745B18B09F265C73E2 /* MZPacManEatPacManSystem.m in Sources */ = {isa = PBXBuildFile; fileRef = 638F07C59E88CD2DCF4961E7 /* MZPacManEatPacManSystem.m */; };
+		638F06289060DC03835AA8A5 /* MZHistorizedComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = 638F0F5EBF82C9B3B439591D /* MZHistorizedComponent.m */; };
 		638F0684A8DB58EB15BABA2E /* MZUpdateTileViewOnDotRemovalSystem.m in Sources */ = {isa = PBXBuildFile; fileRef = 638F03D6B420BDA05AB2759A /* MZUpdateTileViewOnDotRemovalSystem.m */; };
 		638F068B581BD20C38C6DD70 /* MZGameOverComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = 638F09723115E2454E319ADE /* MZGameOverComponent.m */; };
+		638F06DEFB81A97FB24915AB /* MZMoveHistoryComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = 638F09BC9314595BEA670E57 /* MZMoveHistoryComponent.m */; };
 		638F076E8E3D9FEE6ECFDC14 /* MZMazeTileEmitter.m in Sources */ = {isa = PBXBuildFile; fileRef = 638F03794D507F3C157438B5 /* MZMazeTileEmitter.m */; };
 		638F07AA8536019FC1D59912 /* MZMazeMetricsComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = 638F01C5C0FB51046C56BDC0 /* MZMazeMetricsComponent.m */; };
 		638F08C2335B577023A41091 /* MZGameOverPopupSystem.m in Sources */ = {isa = PBXBuildFile; fileRef = 638F031C7217082A6ACF4B7D /* MZGameOverPopupSystem.m */; };
@@ -149,6 +153,7 @@
 		0EB59A553BB14C6FBAD2CB0B /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 		26F0E1DF73804C419A02359C /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		638F00E84598DAB16319A9D9 /* MZMazeLevelComponent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MZMazeLevelComponent.m; sourceTree = "<group>"; };
+		638F00FA5D5D9F459B1D7122 /* MZHistorizedComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MZHistorizedComponent.h; sourceTree = "<group>"; };
 		638F0138025E510518859615 /* MZStopedComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MZStopedComponent.h; sourceTree = "<group>"; };
 		638F0139E456C49568927867 /* MZPositionComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MZPositionComponent.h; sourceTree = "<group>"; };
 		638F01C5C0FB51046C56BDC0 /* MZMazeMetricsComponent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MZMazeMetricsComponent.m; sourceTree = "<group>"; };
@@ -173,6 +178,8 @@
 		638F052E2E5657BD51CA3E7D /* MZComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MZComponent.h; sourceTree = "<group>"; };
 		638F05738D95FB19DA585A7F /* MZBigDotComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MZBigDotComponent.h; sourceTree = "<group>"; };
 		638F059CA24D1ACD98668E5B /* MZDotComponent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MZDotComponent.m; sourceTree = "<group>"; };
+		638F05A4A6C0CFA6C50B150D /* MZMoveHistoryComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MZMoveHistoryComponent.h; sourceTree = "<group>"; };
+		638F05A80A21E5520DB3EF08 /* maze7.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = maze7.txt; sourceTree = "<group>"; };
 		638F05CB89AC6CDB95DA991C /* MZPacManEatPacManSystem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MZPacManEatPacManSystem.h; sourceTree = "<group>"; };
 		638F0666271BD9186745342F /* MZMovingComponent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MZMovingComponent.m; sourceTree = "<group>"; };
 		638F068163CBD507AF02538C /* MZMazeTileEmitter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MZMazeTileEmitter.h; sourceTree = "<group>"; };
@@ -189,6 +196,7 @@
 		638F09723115E2454E319ADE /* MZGameOverComponent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MZGameOverComponent.m; sourceTree = "<group>"; };
 		638F09A5BD129C3A337CD46A /* MZTimeConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MZTimeConstants.h; sourceTree = "<group>"; };
 		638F09B03261A1946F758E5E /* MZGateComponent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MZGateComponent.m; sourceTree = "<group>"; };
+		638F09BC9314595BEA670E57 /* MZMoveHistoryComponent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MZMoveHistoryComponent.m; sourceTree = "<group>"; };
 		638F09D285B22FC28B68D71D /* MZMovingComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MZMovingComponent.h; sourceTree = "<group>"; };
 		638F0A0D3879CBE7DDCB3E92 /* MZDisplayMazeTilesSystem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MZDisplayMazeTilesSystem.h; sourceTree = "<group>"; };
 		638F0A4ECB77C98D2D3EA156 /* MZWishDirectionComponent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MZWishDirectionComponent.m; sourceTree = "<group>"; };
@@ -200,11 +208,13 @@
 		638F0B8CD09812B0A952A25F /* MZGameOverComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MZGameOverComponent.h; sourceTree = "<group>"; };
 		638F0BAA9203EF67DE488514 /* MZMazeTileComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MZMazeTileComponent.h; sourceTree = "<group>"; };
 		638F0BBE4A75D6A51B047C54 /* MZGameScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MZGameScene.h; sourceTree = "<group>"; };
+		638F0C11B40C861A6910BD00 /* MZMoveHistorizedPacManSystem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MZMoveHistorizedPacManSystem.h; sourceTree = "<group>"; };
 		638F0C1AA710DB4A4821D7B6 /* maze1.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = maze1.txt; sourceTree = "<group>"; };
 		638F0C76B0DBC5B65CDCCE45 /* MZNotWalkableComponent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MZNotWalkableComponent.m; sourceTree = "<group>"; };
 		638F0CB901AA666042568956 /* maze2.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = maze2.txt; sourceTree = "<group>"; };
 		638F0CBE491DE664EBE1A040 /* MZPacManComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MZPacManComponent.h; sourceTree = "<group>"; };
 		638F0D1B6E1239F7664578D4 /* MZGameOverPopupSystem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MZGameOverPopupSystem.h; sourceTree = "<group>"; };
+		638F0D47FCE953862A7199C7 /* MZMoveHistorizedPacManSystem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MZMoveHistorizedPacManSystem.m; sourceTree = "<group>"; };
 		638F0D56DB5D245A828455BB /* ESEntityRepository+Singleton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ESEntityRepository+Singleton.m"; sourceTree = "<group>"; };
 		638F0D63D00E2C34240EBFF3 /* MZMovingAnimationSystem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MZMovingAnimationSystem.m; sourceTree = "<group>"; };
 		638F0D9ED7D577F4B8B07C69 /* MZNotWalkableComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MZNotWalkableComponent.h; sourceTree = "<group>"; };
@@ -213,6 +223,7 @@
 		638F0F074E4E545A521AA081 /* MZWishDirectionComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MZWishDirectionComponent.h; sourceTree = "<group>"; };
 		638F0F29C103A194BC8872F7 /* maze4.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = maze4.txt; sourceTree = "<group>"; };
 		638F0F5332A5298F4FAFA1F6 /* MZGameSceneComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MZGameSceneComponent.h; sourceTree = "<group>"; };
+		638F0F5EBF82C9B3B439591D /* MZHistorizedComponent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MZHistorizedComponent.m; sourceTree = "<group>"; };
 		638F0F69133B1053B8CED33F /* MZMazeLevelComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MZMazeLevelComponent.h; sourceTree = "<group>"; };
 		638F0F96E9FD02F2BF55971D /* MZCheckWinSystem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MZCheckWinSystem.m; sourceTree = "<group>"; };
 		638F0FABE6CE60A68579D292 /* MZTickComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MZTickComponent.h; sourceTree = "<group>"; };
@@ -368,6 +379,8 @@
 				638F0CBE491DE664EBE1A040 /* MZPacManComponent.h */,
 				638F051DFAF8E138B499EF5D /* MZDisplayCharacterSystem.m */,
 				638F0DA848BB0C7DC1696F37 /* MZDisplayCharacterSystem.h */,
+				638F0F5EBF82C9B3B439591D /* MZHistorizedComponent.m */,
+				638F00FA5D5D9F459B1D7122 /* MZHistorizedComponent.h */,
 			);
 			path = Character;
 			sourceTree = "<group>";
@@ -375,6 +388,11 @@
 		638F0226761E4D7B94376F66 /* Maze */ = {
 			isa = PBXGroup;
 			children = (
+				638F0C1AA710DB4A4821D7B6 /* maze1.txt */,
+				638F0CB901AA666042568956 /* maze2.txt */,
+				638F03924FF79307FBCB0D2C /* maze3.txt */,
+				638F0F29C103A194BC8872F7 /* maze4.txt */,
+				638F04E048A2DB3FDC8AE585 /* maze5.txt */,
 				638F08A0D3F15D5F616B265D /* maze6.txt */,
 				638F03794D507F3C157438B5 /* MZMazeTileEmitter.m */,
 				638F068163CBD507AF02538C /* MZMazeTileEmitter.h */,
@@ -399,13 +417,9 @@
 				0BA12CD11911B52E00D0BFEB /* MZTileMap.m */,
 				638F01C5C0FB51046C56BDC0 /* MZMazeMetricsComponent.m */,
 				638F06EDABF284B3A730FC52 /* MZMazeMetricsComponent.h */,
-				638F0C1AA710DB4A4821D7B6 /* maze1.txt */,
-				638F0CB901AA666042568956 /* maze2.txt */,
-				638F03924FF79307FBCB0D2C /* maze3.txt */,
-				638F04E048A2DB3FDC8AE585 /* maze5.txt */,
-				638F0F29C103A194BC8872F7 /* maze4.txt */,
 				638F00E84598DAB16319A9D9 /* MZMazeLevelComponent.m */,
 				638F0F69133B1053B8CED33F /* MZMazeLevelComponent.h */,
+				638F05A80A21E5520DB3EF08 /* maze7.txt */,
 			);
 			path = Maze;
 			sourceTree = "<group>";
@@ -438,6 +452,10 @@
 				638F0500926B0902EDC439A0 /* MZMovingAnimationSystem.h */,
 				638F071AA943EA8F8A5FB4FF /* MZStopSystem.m */,
 				638F0235941554DFE6D47CF6 /* MZStopSystem.h */,
+				638F09BC9314595BEA670E57 /* MZMoveHistoryComponent.m */,
+				638F05A4A6C0CFA6C50B150D /* MZMoveHistoryComponent.h */,
+				638F0D47FCE953862A7199C7 /* MZMoveHistorizedPacManSystem.m */,
+				638F0C11B40C861A6910BD00 /* MZMoveHistorizedPacManSystem.h */,
 			);
 			path = Moving;
 			sourceTree = "<group>";
@@ -533,6 +551,9 @@
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = "Maxim Zaks";
 				TargetAttributes = {
+					0B4A6647190C1B1900C0498C = {
+						DevelopmentTeam = 4JJ6U7ZVE4;
+					};
 					0B4A666F190C1B1900C0498C = {
 						TestTargetID = 0B4A6647190C1B1900C0498C;
 					};
@@ -594,6 +615,7 @@
 				638F0CADFEC37A8B994484EF /* maze3.txt in Resources */,
 				638F0F5649886CE4EC6EE039 /* maze5.txt in Resources */,
 				638F0AF6771A903FC7117E7D /* maze4.txt in Resources */,
+				638F037D943A69F7FA613ED7 /* maze7.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -680,6 +702,9 @@
 				638F068B581BD20C38C6DD70 /* MZGameOverComponent.m in Sources */,
 				638F08C2335B577023A41091 /* MZGameOverPopupSystem.m in Sources */,
 				638F036E6DD29B5BD3320C52 /* MZMazeLevelComponent.m in Sources */,
+				638F06DEFB81A97FB24915AB /* MZMoveHistoryComponent.m in Sources */,
+				638F06289060DC03835AA8A5 /* MZHistorizedComponent.m in Sources */,
+				638F0498DEE970868D4E1CFC /* MZMoveHistorizedPacManSystem.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -805,10 +830,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "EPacMan/EPacMan-Prefix.pch";
 				INFOPLIST_FILE = "EPacMan/EPacMan-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SPRITEKIT_TEXTURE_ATLAS_OUTPUT = YES;
 				USER_HEADER_SEARCH_PATHS = "\"${PROJECT_DIR}/Pods\"/**";
 				WRAPPER_EXTENSION = app;
@@ -821,10 +849,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "EPacMan/EPacMan-Prefix.pch";
 				INFOPLIST_FILE = "EPacMan/EPacMan-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SPRITEKIT_TEXTURE_ATLAS_OUTPUT = YES;
 				USER_HEADER_SEARCH_PATHS = "\"${PROJECT_DIR}/Pods\"/**";
 				WRAPPER_EXTENSION = app;

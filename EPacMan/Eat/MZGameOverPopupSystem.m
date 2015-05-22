@@ -9,6 +9,7 @@
 #import "MZGameScene.h"
 #import "MZGameSceneComponent.h"
 #import "MZMazeLevelComponent.h"
+#import "MZMoveHistoryComponent.h"
 
 
 @implementation MZGameOverPopupSystem {
@@ -48,9 +49,11 @@
 
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
     if(buttonIndex == 1){
+        ESEntity *historyOfMoves = [_repository singletonEntity:[MZMoveHistoryComponent matcher]];
+        [historyOfMoves exchangeComponent:[MZMoveHistoryComponent componentWithMoves:@[]]];
         ESEntity *levelEntity = [_repository singletonEntity:[MZMazeLevelComponent matcher]];
         NSUInteger level = getComponent(levelEntity, MZMazeLevelComponent).level;
-        if(level<6){
+        if(level<7){
             NSUInteger nextLevel = level + 1;
             [levelEntity exchangeComponent:[MZMazeLevelComponent componentWithLevel:nextLevel]];
         }

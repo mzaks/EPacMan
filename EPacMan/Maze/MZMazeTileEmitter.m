@@ -12,6 +12,8 @@
 #import "MZStopedComponent.h"
 #import "MZMazeLevelComponent.h"
 #import "MZMazeMetricsComponent.h"
+#import "MZMoveHistoryComponent.h"
+#import "MZHistorizedComponent.h"
 
 
 @implementation MZMazeTileEmitter {
@@ -32,7 +34,7 @@
 
     ESEntityRepository *repo = [ESEntityRepository sharedRepository];
 
-    [[[ESEntityRepository sharedRepository] createEntity] addComponent:[MZMazeMetricsComponent componentWithWidthInTiles:((NSString *)lines[0]).length heightInTiles:lines.count]];
+    [[repo createEntity] addComponent:[MZMazeMetricsComponent componentWithWidthInTiles:((NSString *)lines[0]).length heightInTiles:lines.count]];
 
     for (NSUInteger y = 0; y < lines.count; y++) {
         NSString *line = lines[y];
@@ -60,6 +62,27 @@
                 [pacMan addComponent:[MZStopedComponent new]];
             }
         }
+    }
+
+    [self addHistorizedPacmans:repo];
+
+}
+
++ (void)addHistorizedPacmans:(ESEntityRepository *)repo {
+    NSArray *pacManEntities = [repo entitiesForMatcher:[MZPacManComponent matcher]];
+    if(pacManEntities.count > 1){
+        return;
+    }
+
+    ESEntity *moveHistoryEntity = [repo singletonEntity:[MZMoveHistoryComponent matcher]];
+    NSArray *moves = getComponent(moveHistoryEntity, MZMoveHistoryComponent).moves;
+
+    for(int i = 0; i < moves.count-1; i++){
+        ESEntity *pacMan = [repo createEntity];
+        [pacMan addComponent:[MZPacManComponent new]];
+        [pacMan addComponent:[MZHistorizedComponent new]];
+        [pacMan addComponent:[MZPositionComponent componentWithPosition:getComponent(pacManEntities.firstObject, MZPositionComponent).position]];
+        [pacMan addComponent:[MZStopedComponent new]];
     }
 }
 
