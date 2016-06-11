@@ -552,7 +552,7 @@
 				ORGANIZATIONNAME = "Maxim Zaks";
 				TargetAttributes = {
 					0B4A6647190C1B1900C0498C = {
-						DevelopmentTeam = 4JJ6U7ZVE4;
+						DevelopmentTeam = TK59L26FS4;
 					};
 					0B4A666F190C1B1900C0498C = {
 						TestTargetID = 0B4A6647190C1B1900C0498C;
@@ -849,7 +849,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "EPacMan/EPacMan-Prefix.pch";
