@@ -1,6 +1,4 @@
-#import <Entitas/ESEntity.h>
-#import <Entitas/ESEntityRepository.h>
-#import <Entitas/ESMatcher.h>
+#import "Entitas.h"
 #import "MZGameOverPopupSystem.h"
 #import "ESEntityRepository+Singleton.h"
 #import "MZGameOverComponent.h"

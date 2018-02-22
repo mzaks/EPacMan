@@ -1,5 +1,4 @@
-#import <Foundation/Foundation.h>
-#import <Entitas/ESComponent.h>
+#import "Entitas.h"
 
 @class ESMatcher;
 

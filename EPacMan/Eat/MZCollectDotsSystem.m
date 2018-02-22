@@ -1,5 +1,5 @@
-#import <Entitas/ESEntityRepository.h>
-#import <Entitas/ESRepositoryObserver.h>
+#import "ESRepositoryObserver.h"
+#import "Entitas.h"
 #import "MZCollectDotsSystem.h"
 #import "ESEntityRepository+Singleton.h"
 #import "MZPacManComponent.h"

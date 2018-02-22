@@ -6,7 +6,7 @@
 //  Copyright (c) 2014 Maxim Zaks. All rights reserved.
 //
 
-#import <Entitas/ESEntity.h>
+#import "Entitas.h"
 #import "MZGameScene.h"
 #import "ESEntityRepository+Singleton.h"
 #import "ESSystems.h"

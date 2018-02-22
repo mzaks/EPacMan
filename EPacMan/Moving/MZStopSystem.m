@@ -1,4 +1,4 @@
-#import <Entitas/ESEntity.h>
+#import "Entitas.h"
 #import "MZStopSystem.h"
 #import "ESEntityRepository+Singleton.h"
 #import "MZTickComponent.h"

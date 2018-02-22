@@ -1,4 +1,4 @@
-#import <Entitas/ESEntityRepository.h>
+#import "Entitas.h"
 #import "MZPacManEatPacManSystem.h"
 #import "ESRepositoryObserver.h"
 #import "ESEntityRepository+Singleton.h"

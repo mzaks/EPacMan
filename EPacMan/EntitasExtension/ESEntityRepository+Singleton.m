@@ -1,6 +1,4 @@
-#import <Entitas/ESEntity.h>
-#import <Entitas/ESMatcher.h>
-#import <Entitas/ESCollection.h>
+#import "Entitas.h"
 #import "ESEntityRepository+Singleton.h"
 #import "ESEntityRepository+Internal.h"
 

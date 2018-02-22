@@ -1,4 +1,4 @@
-#import <Entitas/ESMatcher.h>
+#import "Entitas.h"
 #import "MZComponent.h"
 
 
